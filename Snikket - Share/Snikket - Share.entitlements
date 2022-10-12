@@ -9,7 +9,7 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)org.bgent.otherhome.Share2</string>
+		<string>$(AppIdentifierPrefix)org.bgent.otherhome.ios.Share2</string>
 	</array>
 </dict>
 </plist>
