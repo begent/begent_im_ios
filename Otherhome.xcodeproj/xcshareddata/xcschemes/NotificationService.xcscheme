@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1250"
-   version = "1.3">
+   LastUpgradeVersion = "1140"
+   wasCreatedForAppExtension = "YES"
+   version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -14,10 +15,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FE759FA02370ACA4001E78D9"
+               BuildableName = "NotificationService.appex"
+               BlueprintName = "NotificationService"
+               ReferencedContainer = "container:Otherhome.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "FE94E5201CCBA74F00FAE755"
-               BuildableName = "Snikket.app"
-               BlueprintName = "Snikket"
-               ReferencedContainer = "container:Snikket.xcodeproj">
+               BuildableName = "Otherhome.app"
+               BlueprintName = "Otherhome"
+               ReferencedContainer = "container:Otherhome.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,40 +46,47 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      buildConfiguration = "Release"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
+      askForAppToLaunch = "Yes"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      allowLocationSimulation = "YES"
+      launchAutomaticallySubstyle = "2">
+      <RemoteRunnable
+         runnableDebuggingMode = "1"
+         BundleIdentifier = "com.apple.stocks"
+         RemotePath = "/var/containers/Bundle/Application/ED135793-AFC6-47C6-BEA2-1FCB1255D81F/Stocks.app">
+      </RemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE94E5201CCBA74F00FAE755"
-            BuildableName = "Snikket.app"
-            BlueprintName = "Snikket"
-            ReferencedContainer = "container:Snikket.xcodeproj">
+            BuildableName = "Otherhome.app"
+            BlueprintName = "Otherhome"
+            ReferencedContainer = "container:Otherhome.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES">
+      debugDocumentVersioning = "YES"
+      launchAutomaticallySubstyle = "2">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE94E5201CCBA74F00FAE755"
-            BuildableName = "Snikket.app"
-            BlueprintName = "Snikket"
-            ReferencedContainer = "container:Snikket.xcodeproj">
+            BuildableName = "Otherhome.app"
+            BlueprintName = "Otherhome"
+            ReferencedContainer = "container:Otherhome.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

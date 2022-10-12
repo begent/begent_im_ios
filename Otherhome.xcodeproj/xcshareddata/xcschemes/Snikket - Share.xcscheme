@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FE4DDF521F39E0B500A4CE5A"
-               BuildableName = "Snikket - Share.appex"
-               BlueprintName = "Snikket - Share"
-               ReferencedContainer = "container:Snikket.xcodeproj">
+               BuildableName = "Otherhome - Share.appex"
+               BlueprintName = "Otherhome - Share"
+               ReferencedContainer = "container:Otherhome.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,9 +30,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FE94E5201CCBA74F00FAE755"
-               BuildableName = "Snikket.app"
-               BlueprintName = "Snikket"
-               ReferencedContainer = "container:Snikket.xcodeproj">
+               BuildableName = "Otherhome.app"
+               BlueprintName = "Otherhome"
+               ReferencedContainer = "container:Otherhome.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE94E5201CCBA74F00FAE755"
-            BuildableName = "Snikket.app"
-            BlueprintName = "Snikket"
-            ReferencedContainer = "container:Snikket.xcodeproj">
+            BuildableName = "Otherhome.app"
+            BlueprintName = "Otherhome"
+            ReferencedContainer = "container:Otherhome.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -74,16 +74,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
-      askForAppToLaunch = "Yes"
       launchAutomaticallySubstyle = "2">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE94E5201CCBA74F00FAE755"
-            BuildableName = "Snikket.app"
-            BlueprintName = "Snikket"
-            ReferencedContainer = "container:Snikket.xcodeproj">
+            BuildableName = "Otherhome.app"
+            BlueprintName = "Otherhome"
+            ReferencedContainer = "container:Otherhome.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

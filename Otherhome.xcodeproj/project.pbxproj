@@ -471,7 +471,7 @@
 		FE43E43723BF3DE80079BD9B /* ChatAttachementsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAttachementsController.swift; sourceTree = "<group>"; };
 		FE43EB541F3CC55900A4CAAD /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		FE4496C31F87911C009F649C /* db-schema-3.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "db-schema-3.sql"; sourceTree = "<group>"; };
-		FE4DDF531F39E0B500A4CE5A /* Snikket - Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Snikket - Share.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE4DDF531F39E0B500A4CE5A /* Otherhome - Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Otherhome - Share.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4DDF551F39E0B500A4CE5A /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		FE4DDF581F39E0B500A4CE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		FE4DDF5A1F39E0B500A4CE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -541,7 +541,7 @@
 		FE8DD9C4221B153A0090F5AA /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		FE8DD9C6221B15DC0090F5AA /* AbstractRosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRosterViewController.swift; sourceTree = "<group>"; };
 		FE8DD9CA221DBED80090F5AA /* db-schema-4.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "db-schema-4.sql"; sourceTree = "<group>"; };
-		FE94E5211CCBA74F00FAE755 /* Snikket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snikket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE94E5211CCBA74F00FAE755 /* Otherhome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otherhome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE94E5241CCBA74F00FAE755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE94E52B1CCBA74F00FAE755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE94E52D1CCBA74F00FAE755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -957,8 +957,8 @@
 		FE94E5221CCBA74F00FAE755 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE94E5211CCBA74F00FAE755 /* Snikket.app */,
-				FE4DDF531F39E0B500A4CE5A /* Snikket - Share.appex */,
+				FE94E5211CCBA74F00FAE755 /* Otherhome.app */,
+				FE4DDF531F39E0B500A4CE5A /* Otherhome - Share.appex */,
 				FE759FA12370ACA4001E78D9 /* NotificationService.appex */,
 				FE759FC52370B2A4001E78D9 /* Shared.framework */,
 			);
@@ -1109,9 +1109,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FE4DDF521F39E0B500A4CE5A /* Snikket - Share */ = {
+		FE4DDF521F39E0B500A4CE5A /* Otherhome - Share */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE4DDF5E1F39E0B600A4CE5A /* Build configuration list for PBXNativeTarget "Snikket - Share" */;
+			buildConfigurationList = FE4DDF5E1F39E0B600A4CE5A /* Build configuration list for PBXNativeTarget "Otherhome - Share" */;
 			buildPhases = (
 				FE4DDF4F1F39E0B500A4CE5A /* Sources */,
 				FE4DDF501F39E0B500A4CE5A /* Frameworks */,
@@ -1122,9 +1122,9 @@
 			dependencies = (
 				FE759FE52371C83D001E78D9 /* PBXTargetDependency */,
 			);
-			name = "Snikket - Share";
+			name = "Otherhome - Share";
 			productName = "SiskinIM - Share";
-			productReference = FE4DDF531F39E0B500A4CE5A /* Snikket - Share.appex */;
+			productReference = FE4DDF531F39E0B500A4CE5A /* Otherhome - Share.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		FE759FA02370ACA4001E78D9 /* NotificationService */ = {
@@ -1166,9 +1166,9 @@
 			productReference = FE759FC52370B2A4001E78D9 /* Shared.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FE94E5201CCBA74F00FAE755 /* Snikket */ = {
+		FE94E5201CCBA74F00FAE755 /* Otherhome */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE94E54B1CCBA74F00FAE755 /* Build configuration list for PBXNativeTarget "Snikket" */;
+			buildConfigurationList = FE94E54B1CCBA74F00FAE755 /* Build configuration list for PBXNativeTarget "Otherhome" */;
 			buildPhases = (
 				3795F91E26FB55270067361A /* BartyCrouch */,
 				FE94E51D1CCBA74F00FAE755 /* Sources */,
@@ -1186,12 +1186,12 @@
 				FE759FA72370ACA4001E78D9 /* PBXTargetDependency */,
 				FE759FCB2370B2A4001E78D9 /* PBXTargetDependency */,
 			);
-			name = Snikket;
+			name = Otherhome;
 			packageProductDependencies = (
 				3797D5BF26EA456F0091DAF8 /* HSLuvSwift */,
 			);
 			productName = SiskinIM;
-			productReference = FE94E5211CCBA74F00FAE755 /* Snikket.app */;
+			productReference = FE94E5211CCBA74F00FAE755 /* Otherhome.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1202,7 +1202,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1140;
-				ORGANIZATIONNAME = Snikket;
+				ORGANIZATIONNAME = "Begent Group";
 				TargetAttributes = {
 					FE4DDF521F39E0B500A4CE5A = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1246,7 +1246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FE94E51C1CCBA74F00FAE755 /* Build configuration list for PBXProject "Snikket" */;
+			buildConfigurationList = FE94E51C1CCBA74F00FAE755 /* Build configuration list for PBXProject "Otherhome" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1269,8 +1269,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE94E5201CCBA74F00FAE755 /* Snikket */,
-				FE4DDF521F39E0B500A4CE5A /* Snikket - Share */,
+				FE94E5201CCBA74F00FAE755 /* Otherhome */,
+				FE4DDF521F39E0B500A4CE5A /* Otherhome - Share */,
 				FE759FA02370ACA4001E78D9 /* NotificationService */,
 				FE759FC42370B2A4001E78D9 /* Shared */,
 			);
@@ -1605,7 +1605,7 @@
 /* Begin PBXTargetDependency section */
 		FE4DDF5C1F39E0B500A4CE5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FE4DDF521F39E0B500A4CE5A /* Snikket - Share */;
+			target = FE4DDF521F39E0B500A4CE5A /* Otherhome - Share */;
 			targetProxy = FE4DDF5B1F39E0B500A4CE5A /* PBXContainerItemProxy */;
 		};
 		FE759FA72370ACA4001E78D9 /* PBXTargetDependency */ = {
@@ -1820,7 +1820,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_TEAM = 2YH6MCD3C8;
+				DEVELOPMENT_TEAM = 7JK3BGG9B6;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SDK_DIR)/usr/include",
@@ -1834,7 +1834,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = org.snikket.ios.Share2;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.Share2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1853,7 +1853,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_TEAM = 2YH6MCD3C8;
+				DEVELOPMENT_TEAM = 7JK3BGG9B6;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SDK_DIR)/usr/include",
@@ -1867,7 +1867,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = org.snikket.ios.Share2;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.Share2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Snikket/SiskinIM-Bridging-Header.h";
@@ -1888,7 +1888,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_TEAM = 2YH6MCD3C8;
+				DEVELOPMENT_TEAM = 7JK3BGG9B6;
 				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = (
@@ -1905,7 +1905,7 @@
 				MARKETING_VERSION = 1.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.snikket.ios.NotificationService2;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.NotificationService2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1928,7 +1928,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_TEAM = 2YH6MCD3C8;
+				DEVELOPMENT_TEAM = 7JK3BGG9B6;
 				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = (
@@ -1944,7 +1944,7 @@
 				);
 				MARKETING_VERSION = 1.2;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.snikket.ios.NotificationService2;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.NotificationService2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Snikket/SiskinIM-Bridging-Header.h";
@@ -1968,7 +1968,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2YH6MCD3C8;
+				DEVELOPMENT_TEAM = 7JK3BGG9B6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1989,7 +1989,7 @@
 				MARKETING_VERSION = 1.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.snikket.ios.Shared;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.Shared;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -2018,7 +2018,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2YH6MCD3C8;
+				DEVELOPMENT_TEAM = 7JK3BGG9B6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2038,7 +2038,7 @@
 				);
 				MARKETING_VERSION = 1.2;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.snikket.ios.Shared;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.Shared;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -2181,7 +2181,7 @@
 				CURRENT_PROJECT_VERSION = 10;
 				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 2YH6MCD3C8;
+				DEVELOPMENT_TEAM = 7JK3BGG9B6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2200,8 +2200,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = org.snikket.ios;
-				PRODUCT_NAME = Snikket;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios;
+				PRODUCT_NAME = Otherhome;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2221,7 +2221,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 10;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 2YH6MCD3C8;
+				DEVELOPMENT_TEAM = 7JK3BGG9B6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2241,8 +2241,8 @@
 				);
 				MARKETING_VERSION = 1.2;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.snikket.ios;
-				PRODUCT_NAME = Snikket;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios;
+				PRODUCT_NAME = Otherhome;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2255,7 +2255,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FE4DDF5E1F39E0B600A4CE5A /* Build configuration list for PBXNativeTarget "Snikket - Share" */ = {
+		FE4DDF5E1F39E0B600A4CE5A /* Build configuration list for PBXNativeTarget "Otherhome - Share" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FE4DDF5F1F39E0B600A4CE5A /* Debug */,
@@ -2282,7 +2282,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE94E51C1CCBA74F00FAE755 /* Build configuration list for PBXProject "Snikket" */ = {
+		FE94E51C1CCBA74F00FAE755 /* Build configuration list for PBXProject "Otherhome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FE94E5491CCBA74F00FAE755 /* Debug */,
@@ -2291,7 +2291,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE94E54B1CCBA74F00FAE755 /* Build configuration list for PBXNativeTarget "Snikket" */ = {
+		FE94E54B1CCBA74F00FAE755 /* Build configuration list for PBXNativeTarget "Otherhome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FE94E54C1CCBA74F00FAE755 /* Debug */,

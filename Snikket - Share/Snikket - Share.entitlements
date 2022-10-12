@@ -4,12 +4,12 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.snikket.shared</string>
-		<string>group.snikket.share</string>
+		<string>group.begent.otherhome</string>
+		<string>group.otherhome</string>
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)org.snikket.ios.Share</string>
+		<string>$(AppIdentifierPrefix)org.bgent.otherhome.Share2</string>
 	</array>
 </dict>
 </plist>

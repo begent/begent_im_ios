@@ -1,4 +1,4 @@
-/* No comment provided by engineer. */
+/* Preceded by user's server domain */
 " server returned an error on the request to enable push notifications. You can try to enable this feature later on from the account settings." = " server returned an error on the request to enable push notifications. You can try to enable this feature later on from the account settings.";
 
 /* Placeholder is the MBs Download Limit */
@@ -25,10 +25,10 @@
 /* Action: add the provided JID as a new contact */
 "Add contact" = "Add contact";
 
-/* No comment provided by engineer. */
+/* Section heading for a list of postal addresses */
 "Addresses" = "Addresses";
 
-/* No comment provided by engineer. */
+/* How many messages to fetch from the server */
 "All" = "All";
 
 /* No comment provided by engineer. */
@@ -98,7 +98,7 @@
 /* Alert title: change group chat picture */
 "Change picture" = "Change picture";
 
-/* No comment provided by engineer. */
+/* Alert title: Change group chat subject */
 "Change subject" = "Change subject";
 
 /* No comment provided by engineer. */
@@ -156,7 +156,7 @@
 /* No comment provided by engineer. */
 "Default" = "Default";
 
-/* No comment provided by engineer. */
+/* Context menu action */
 "Delete" = "Delete";
 
 /* Action: Delete all downloaded files */
@@ -180,7 +180,7 @@
 /* No comment provided by engineer. */
 "Details" = "Details";
 
-/* No comment provided by engineer. */
+/* Section heading: settings for how contact list entries should be displayed */
 "Display" = "Display";
 
 /* Label for text field where user can enter their preferred name to display to their contacts */
@@ -217,6 +217,9 @@
 /* No comment provided by engineer. */
 "Enable %@" = "Enable %@";
 
+/* #bc-ignore! */
+"Enable automatic message synchronization" = "Enable automatic message synchronization";
+
 /* No comment provided by engineer. */
 "Enable telephony provider?" = "Enable telephony provider?";
 
@@ -232,7 +235,7 @@
 /* No comment provided by engineer. */
 "Enter message to send to:" = "Enter message to send to:";
 
-/* No comment provided by engineer. */
+/* Text field prompt */
 "Enter new name for group chat" = "Enter new name for group chat";
 
 /* No comment provided by engineer. */
@@ -271,10 +274,13 @@
 /* No comment provided by engineer. */
 "Fingerprint of this device" = "Fingerprint of this device";
 
+/* #bc-ignore! */
+"For best experience it is suggested to enable Message Archving with automatic message synchronization of at least last 12 hours.\nDo you wish to do this now?" = "For best experience it is suggested to enable Message Archving with automatic message synchronization of at least last 12 hours.\nDo you wish to do this now?";
+
 /* No comment provided by engineer. */
 "Free for chat" = "Free for chat";
 
-/* No comment provided by engineer. */
+/* Section heading: general settings about contacts */
 "General" = "General";
 
 /* Image or Video Quality */
@@ -283,8 +289,11 @@
 /* Image or Video Quality */
 "Highest" = "Highest";
 
-/* No comment provided by engineer. */
+/* Section heading for chat history controls */
 "History" = "History";
+
+/* IBR: Unused in Snikket #bc-ignore! */
+"If you don't know any XMPP server domain names, then select one of our trusted servers." = "If you don't know any XMPP server domain names, then select one of our trusted servers.";
 
 /* No comment provided by engineer. */
 "Info" = "Info";
@@ -328,10 +337,10 @@
 /* No comment provided by engineer. */
 "Key not generated!" = "Key not generated!";
 
-/* Placeholder is number of days */
+/* Placeholder is number of days (sync period) */
 "Last %d days" = "Last %d days";
 
-/* Placeholder is hours value */
+/* Placeholder is hours value (sync period) */
 "Last %d hours" = "Last %d hours";
 
 /* No comment provided by engineer. */
@@ -376,8 +385,11 @@
 /* No comment provided by engineer. */
 "Message Archiving" = "Message Archiving";
 
-/* No comment provided by engineer. */
+/* Alert title */
 "Message Archiving Error" = "Message Archiving Error";
+
+/* #bc-ignore! */
+"Message Synchronization" = "Message Synchronization";
 
 /* No comment provided by engineer. */
 "Messages" = "Messages";
@@ -417,7 +429,8 @@
 /* No comment provided by engineer. */
 "No messages yet. Say hi!" = "No messages yet. Say hi!";
 
-/* No comment provided by engineer. */
+/* Encryption mode
+   Option: no end-to-end encryption for this chat */
 "None" = "None";
 
 /* Alert title */
@@ -429,7 +442,7 @@
 /* No comment provided by engineer. */
 "Not Joined" = "Not Joined";
 
-/* No comment provided by engineer. */
+/* How many messages to fetch from the server */
 "Nothing" = "Nothing";
 
 /* No comment provided by engineer. */
@@ -438,10 +451,11 @@
 /* No comment provided by engineer. */
 "OK" = "OK";
 
-/* No comment provided by engineer. */
+/* Action: Delete all downloaded files over 7 days old */
 "Older than 7 days" = "Older than 7 days";
 
-/* No comment provided by engineer. */
+/* Encryption mode
+   Option: use OMEMO encryption for this chat */
 "OMEMO" = "OMEMO";
 
 /* Status Options */
@@ -483,6 +497,9 @@
 /* No comment provided by engineer. */
 "Please try again!" = "Please try again!";
 
+/* IBR: Unused in Snikket #bc-ignore! */
+"Preferred domain name" = "Preferred domain name";
+
 /* Alert title */
 "Preview" = "Preview";
 
@@ -513,7 +530,7 @@
 /* Placeholder is the number in MBs */
 "Received files are using %d MB of storage." = "Received files are using %d MB of storage.";
 
-/* No comment provided by engineer. */
+/* Action button */
 "Register" = "Register";
 
 /* Alert title */
@@ -528,7 +545,8 @@
 /* No comment provided by engineer. */
 "Rename" = "Rename";
 
-/* No comment provided by engineer. */
+/* Alert title
+   Alert title: rename a group chat */
 "Rename chat" = "Rename chat";
 
 /* No comment provided by engineer. */
@@ -564,7 +582,8 @@
 /* Shown above a choice list of the user's accounts */
 "Select account to open chat from:" = "Select account to open chat from:";
 
-/* No comment provided by engineer. */
+/* Action button: select (existing) photo for group chat picture
+   Action: open file picker to select a photo to use as a profile picture */
 "Select photo" = "Select photo";
 
 /* Alert title - select image share quality */
@@ -582,19 +601,19 @@
 /* No comment provided by engineer. */
 "Send" = "Send";
 
-/* No comment provided by engineer. */
+/* Action button: share with chat this device's current location */
 "Send Current Location" = "Send Current Location";
 
 /* No comment provided by engineer. */
 "Send message" = "Send message";
 
-/* No comment provided by engineer. */
+/* Action button: share with chat the location of the pin dropped by the user on the map (as opposed to device current location) */
 "Send Pin Location" = "Send Pin Location";
 
 /* No comment provided by engineer. */
 "Server did not respond to registration request" = "Server did not respond to registration request";
 
-/* No comment provided by engineer. */
+/* Preceded by user's server domain */
 "server returned an error on the request to enable archiving. You can try to enable this feature later on from the account settings." = "server returned an error on the request to enable archiving. You can try to enable this feature later on from the account settings.";
 
 /* No comment provided by engineer. */
@@ -621,7 +640,8 @@
 /* No comment provided by engineer. */
 "Successfully registered to receive push notifications." = "Successfully registered to receive push notifications.";
 
-/* No comment provided by engineer. */
+/* Action button: take a new photo to use to as group chat picture
+   Action: take a photo to use as a profile picture */
 "Take photo" = "Take photo";
 
 /* followed by a space and error condition */
@@ -641,6 +661,9 @@
 
 /* No comment provided by engineer. */
 "This will delete all the message history for this chat. Continue?" = "This will delete all the message history for this chat. Continue?";
+
+/* IBR: Unused in Snikket #bc-ignore! */
+"Trusted servers" = "Trusted servers";
 
 /* Alert text */
 "Unable to publish your profile picture at this time.\nError: %@" = "Unable to publish your profile picture at this time.\nError: %@";
@@ -666,7 +689,7 @@
 /* No comment provided by engineer. */
 "User with provided username already exists" = "User with provided username already exists";
 
-/* No comment provided by engineer. */
+/* followed by account name to select */
 "using" = "using";
 
 /* No comment provided by engineer. */
@@ -680,6 +703,9 @@
 
 /* Option: only notify user when they are mentioned in this group */
 "When mentioned" = "When mentioned";
+
+/* #bc-ignore! */
+"When you share files using HTTP, they are uploaded to HTTP server with unique URL. Anyone who knows the unique URL to the file is able to download it.\nDo you wish to enable?" = "When you share files using HTTP, they are uploaded to HTTP server with unique URL. Anyone who knows the unique URL to the file is able to download it.\nDo you wish to enable?";
 
 /* No comment provided by engineer. */
 "Would you like to use %@ as the default provider for outgoing SMS and calls from %@?" = "Would you like to use %1$@ as the default provider for outgoing SMS and calls from %2$@?";
@@ -716,3 +742,4 @@
 
 /* No comment provided by engineer. */
 "Your Name" = "Your Name";
+
