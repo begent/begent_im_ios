@@ -24,7 +24,7 @@ import TigaseSwift
 
 public class NotificationEncryptionKeys {
     
-    private static let storage = UserDefaults(suiteName: "group.snikket.notifications")!;
+    private static let storage = UserDefaults(suiteName: "group.bgent.otherhome.ios.NotificationService")!;
     
     public static func key(for account: BareJID) -> Data? {
         storage.data(forKey: account.stringValue)

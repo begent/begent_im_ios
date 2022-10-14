@@ -68,7 +68,7 @@ class DownloadManager {
             if let hash = Digest.sha1.digest(toHex: item.url.data(using: .utf8)!), var params = Settings.sharedDefaults!.dictionary(forKey: "upload-\(hash)"), let filename = params["name"] as? String {
                 var jids: [BareJID] = (params["jids"] as? [String])?.map({ BareJID($0) }) ?? [];
 
-                let sharedFileUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.snikket.shared")!.appendingPathComponent("upload", isDirectory: true).appendingPathComponent(hash, isDirectory: false);
+                let sharedFileUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.bgent.otherhome.ios.Shared")!.appendingPathComponent("upload", isDirectory: true).appendingPathComponent(hash, isDirectory: false);
 
                 var handled = false;
                 if jids.contains(item.jid) {

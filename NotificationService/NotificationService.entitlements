@@ -4,8 +4,8 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.begent.otherhome</string>
-		<string>group.otherhome</string>
+		<string>group.bgent.otherhome.ios.NotificationService</string>
+		<string>group.bgent.otherhome.ios.Shared</string>
 	</array>
 </dict>
 </plist>

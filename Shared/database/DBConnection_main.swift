@@ -24,7 +24,7 @@ import Foundation
 extension DBConnection {
 
     public static func mainDbURL() -> URL {
-        let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.snikket.shared")!;
+        let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.bgent.otherhome.ios.Shared")!;
         return containerURL.appendingPathComponent("snikket_main.db");
     }
     

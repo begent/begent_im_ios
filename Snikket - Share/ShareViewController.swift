@@ -74,7 +74,7 @@ class ShareViewController: SLComposeServiceViewController {
     
     var webUrl: URL?;
     
-    var sharedDefaults = UserDefaults(suiteName: "group.snikket.share");
+    var sharedDefaults = UserDefaults(suiteName: "group.bgent.otherhome.ios.Share");
     
     override func isContentValid() -> Bool {
         return account != nil && xmppClient.state == .connected && recipients.count > 0;
@@ -133,7 +133,7 @@ class ShareViewController: SLComposeServiceViewController {
                                     params["size"] = Int(size!);
                                 }
                             
-                                let localUploadDirUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.snikket.shared")!.appendingPathComponent("upload", isDirectory: true);
+                                let localUploadDirUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.bgent.otherhome.ios.Shared")!.appendingPathComponent("upload", isDirectory: true);
                                 if !FileManager.default.fileExists(atPath: localUploadDirUrl.path) {
                                     try? FileManager.default.createDirectory(at: localUploadDirUrl, withIntermediateDirectories: true, attributes: nil);
                                 }

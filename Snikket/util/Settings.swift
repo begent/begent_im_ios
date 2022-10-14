@@ -65,7 +65,7 @@ public enum Settings: String {
         return UserDefaults.standard;
     }
     
-    public static let sharedDefaults = UserDefaults(suiteName: "group.snikket.share");
+    public static let sharedDefaults = UserDefaults(suiteName: "group.bgent.otherhome.ios.Share");
     
     public static func initialize() {
         let defaults: [String: Any] = [
@@ -132,14 +132,14 @@ public enum Settings: String {
                     if let timestamp = (v as? [String: Any])?["timestamp"] as? Date {
                         if timestamp < removeOlder {
                             self.sharedDefaults?.removeObject(forKey: k);
-                            let localUploadDirUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.snikket.shared")!.appendingPathComponent("upload", isDirectory: true).appendingPathComponent(hash, isDirectory: false);
+                            let localUploadDirUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.bgent.otherhome.ios.Shared")!.appendingPathComponent("upload", isDirectory: true).appendingPathComponent(hash, isDirectory: false);
                             if FileManager.default.fileExists(atPath: localUploadDirUrl.path) {
                                 try? FileManager.default.removeItem(at: localUploadDirUrl);
                             }
                         }
                     } else {
                         self.sharedDefaults?.removeObject(forKey: k);
-                        let localUploadDirUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.snikket.shared")!.appendingPathComponent("upload", isDirectory: true).appendingPathComponent(hash, isDirectory: false);
+                        let localUploadDirUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.bgent.otherhome.ios.Shared")!.appendingPathComponent("upload", isDirectory: true).appendingPathComponent(hash, isDirectory: false);
                         if FileManager.default.fileExists(atPath: localUploadDirUrl.path) {
                             try? FileManager.default.removeItem(at: localUploadDirUrl);
                         }

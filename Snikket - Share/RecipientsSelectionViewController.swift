@@ -44,7 +44,7 @@ class RecipientsSelectionViewController: UITableViewController {
     
     var delegate: ShareViewController?;
     
-    var sharedDefaults = UserDefaults(suiteName: "group.snikket.share");
+    var sharedDefaults = UserDefaults(suiteName: "group.bgent.otherhome.ios.Share");
     fileprivate let indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 80, height: 80));
     
     override func viewDidLoad() {
