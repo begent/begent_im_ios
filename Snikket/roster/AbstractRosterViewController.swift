@@ -129,7 +129,7 @@ class AbstractRosterViewController: UITableViewController, UISearchResultsUpdati
         if let v = view as? UITableViewHeaderFooterView {
             v.textLabel?.font = UIFont.preferredFont(forTextStyle: .subheadline);
             v.textLabel?.text = v.textLabel?.text?.uppercased();
-            v.textLabel?.textColor = UIColor.white;
+            v.textLabel?.textColor = UIColor.blue;
             v.isOpaque = true;
             v.tintColor = UIColor(named: "chatslistBackground")?.lighter(ratio: 0.1);
         }

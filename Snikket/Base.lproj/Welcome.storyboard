@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hng-iF-J9G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hng-iF-J9G">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,7 +13,7 @@
         <!--Snikket-->
         <scene sceneID="CR0-Jy-GsI">
             <objects>
-                <viewController id="0Ih-Lt-06h" customClass="WelcomeController" customModule="Snikket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Ih-Lt-06h" customClass="WelcomeController" customModule="Otherhome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bgi-Je-nna">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                                                     <constraint firstAttribute="height" constant="150" id="hYH-C9-jID"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="Snikket">
+                                                    <fragment content="Otherhome">
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,9 +74,8 @@
                                                         </attributes>
                                                     </fragment>
                                                     <fragment>
-                                                        <string key="content">is a secure, privacy-friendly chat app.
- To get started, you need an invitation from another friend using Snikket. 
- If you already have an invitation, now is a good time to open it up and tap the ‘open the app’ button! </string>
+                                                        <string key="content">is a private and secure chat app.
+ To get started, create a new Otherhome account by admin, or if you are already a member, press sign in!</string>
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -98,13 +97,13 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xm-uz-gIu">
-                                                <rect key="frame" x="125" y="600" width="178" height="34"/>
+                                                <rect key="frame" x="114" y="600" width="200" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="178" id="IdX-2Q-SyJ"/>
+                                                    <constraint firstAttribute="width" constant="200" id="IdX-2Q-SyJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <inset key="contentEdgeInsets" minX="50" minY="8" maxX="50" maxY="8"/>
-                                                <state key="normal" title="Learn more">
+                                                <state key="normal" title="Othehome?">
                                                     <color key="titleColor" name="snikketBlue"/>
                                                 </state>
                                                 <connections>
@@ -112,7 +111,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="is0-gN-a4J">
-                                                <rect key="frame" x="125" y="654" width="178" height="34"/>
+                                                <rect key="frame" x="114" y="654" width="200" height="34"/>
                                                 <color key="backgroundColor" name="snikketBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <inset key="contentEdgeInsets" minX="50" minY="8" maxX="50" maxY="8"/>
@@ -188,10 +187,10 @@
         <!--Navigation Controller-->
         <scene sceneID="iBO-ne-46y">
             <objects>
-                <navigationController storyboardIdentifier="WelcomeScreenNavigationController" automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" id="hng-iF-J9G" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WelcomeScreenNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="hng-iF-J9G" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1R5-Po-FM0">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="tintColor"/>
                         <color key="barTintColor" name="chatslistBackground"/>
@@ -213,13 +212,13 @@
         <image name="appLogo" width="1024" height="1024"/>
         <image name="qrCode" width="24" height="24"/>
         <namedColor name="chatslistBackground">
-            <color red="0.99607843137254903" green="0.85490196078431369" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="snikketBlue">
-            <color red="0.25098039215686274" green="0.55294117647058827" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="tintColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
