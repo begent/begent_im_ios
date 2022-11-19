@@ -23,6 +23,8 @@
 		379D914A26E8A0E300B877CA /* db-schema-15.sql in Resources */ = {isa = PBXBuildFile; fileRef = 379D914926E8A0E300B877CA /* db-schema-15.sql */; };
 		379D914C26E8A29800B877CA /* DBLastMessageSyncStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D914B26E8A29800B877CA /* DBLastMessageSyncStore.swift */; };
 		37B93BDF2711792300B943D0 /* TelephonyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B93BDE2711792300B943D0 /* TelephonyManager.swift */; };
+		9FA510DE2917F6FD008F0BB4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE759FA32370ACA4001E78D9 /* NotificationService.swift */; };
+		9FC8AB872917F13500AAF50C /* NotificationEncryptionKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75A007237585DC001E78D9 /* NotificationEncryptionKeys.swift */; };
 		E928AD4326D6A08A00F29F93 /* db-schema-14.sql in Resources */ = {isa = PBXBuildFile; fileRef = E928AD4226D6A08A00F29F93 /* db-schema-14.sql */; };
 		E95AA70226D38B6F00A38D44 /* DisplayNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95AA70126D38B6E00A38D44 /* DisplayNameViewController.swift */; };
 		E963721026D786D000332482 /* BlockingCommandModuleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E963720F26D786D000332482 /* BlockingCommandModuleExtension.swift */; };
@@ -127,7 +129,6 @@
 		FE719E7C22730DC3007CEEC9 /* OMEMOIdentityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE719E7B22730DC3007CEEC9 /* OMEMOIdentityTableViewCell.swift */; };
 		FE719E7E2274D20D007CEEC9 /* OMEMOFingerprintsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE719E7D2274D20D007CEEC9 /* OMEMOFingerprintsController.swift */; };
 		FE74D510234A4E1F001A925B /* ChatTableViewSystemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE74D50F234A4E1F001A925B /* ChatTableViewSystemCell.swift */; };
-		FE759FA42370ACA4001E78D9 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE759FA32370ACA4001E78D9 /* NotificationService.swift */; };
 		FE759FA82370ACA4001E78D9 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FE759FA12370ACA4001E78D9 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FE759FC92370B2A4001E78D9 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = FE759FC72370B2A4001E78D9 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE759FCC2370B2A4001E78D9 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE759FC52370B2A4001E78D9 /* Shared.framework */; };
@@ -152,7 +153,6 @@
 		FE759FFC23742CE5001E78D9 /* NotificationCenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE759FFA23742C48001E78D9 /* NotificationCenterDelegate.swift */; };
 		FE75A00323743A5C001E78D9 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75A00223743A5C001E78D9 /* NotificationManager.swift */; };
 		FE75A006237475E2001E78D9 /* MainNotificationManagerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75A004237475CD001E78D9 /* MainNotificationManagerProvider.swift */; };
-		FE75A008237585DC001E78D9 /* NotificationEncryptionKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75A007237585DC001E78D9 /* NotificationEncryptionKeys.swift */; };
 		FE75A0102375F338001E78D9 /* PushEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75A00E2375F324001E78D9 /* PushEventHandler.swift */; };
 		FE75A0122376E73C001E78D9 /* SiskinPushNotificationsModuleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75A0112376E73C001E78D9 /* SiskinPushNotificationsModuleProvider.swift */; };
 		FE75AA7E25854DE2002B59AE /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75AA7D25854DE2002B59AE /* WelcomeController.swift */; };
@@ -279,14 +279,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		FE4DDF611F39E0B600A4CE5A /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
 				FE759FA82370ACA4001E78D9 /* NotificationService.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		FEF80DB71CDCC508005645A7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -400,6 +400,7 @@
 		59D7B86C276489C600412972 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = id; path = id.lproj/Info.plist; sourceTree = "<group>"; };
 		59D7B86D276489C600412972 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		59D7B86F27648A5700412972 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Account.strings; sourceTree = "<group>"; };
+		9FA510DC2917F40C008F0BB4 /* OtherhomeRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OtherhomeRelease.entitlements; sourceTree = "<group>"; };
 		E928AD4226D6A08A00F29F93 /* db-schema-14.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "db-schema-14.sql"; sourceTree = "<group>"; };
 		E95AA70126D38B6E00A38D44 /* DisplayNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNameViewController.swift; sourceTree = "<group>"; };
 		E963720F26D786D000332482 /* BlockingCommandModuleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockingCommandModuleExtension.swift; sourceTree = "<group>"; };
@@ -663,6 +664,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F0AE0FD2901326D003BE958 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				FEE49DD22426879500900BBB /* channel */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		FE01ADA11E214CEA00FA7E65 /* xmpp */ = {
 			isa = PBXGroup;
 			children = (
@@ -942,6 +951,7 @@
 		FE94E5181CCBA74F00FAE755 = {
 			isa = PBXGroup;
 			children = (
+				9FA510DC2917F40C008F0BB4 /* OtherhomeRelease.entitlements */,
 				FE1908902584D69400CA049F /* Frameworks */,
 				FE759FA22370ACA4001E78D9 /* NotificationService */,
 				FE759FC62370B2A4001E78D9 /* Shared */,
@@ -969,7 +979,7 @@
 			isa = PBXGroup;
 			children = (
 				FEE49DD3242687D800900BBB /* chats */,
-				FEE49DD22426879500900BBB /* channel */,
+				9F0AE0FD2901326D003BE958 /* New Group */,
 				FEE49DD12426879400900BBB /* groupchat */,
 				FE4071E221E2603400F09B58 /* voip */,
 				FE86C4481F7BFF93009E3CB8 /* SiskinIM-Bridging-Header.h */,
@@ -1405,7 +1415,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE759FA42370ACA4001E78D9 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1413,7 +1422,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE75A008237585DC001E78D9 /* NotificationEncryptionKeys.swift in Sources */,
 				FE75A00323743A5C001E78D9 /* NotificationManager.swift in Sources */,
 				FE759FDB2370B384001E78D9 /* Cipher+AES.swift in Sources */,
 				FE759FE92371DDD1001E78D9 /* DBManager.swift in Sources */,
@@ -1467,6 +1475,7 @@
 				FE137A4821F6464D006B7F7C /* UIColor_mix.swift in Sources */,
 				3797D5BD26E9E42E0091DAF8 /* AvatarColors.swift in Sources */,
 				FE507A1E1CDB7B3B001A015C /* RosterViewController.swift in Sources */,
+				9FA510DE2917F6FD008F0BB4 /* NotificationService.swift in Sources */,
 				FE2332DF242CB02700008ED4 /* AppendixProtocol.swift in Sources */,
 				FEDCBF691D9C53BA00AE9129 /* RosterProviderGrouped.swift in Sources */,
 				E95AA70226D38B6F00A38D44 /* DisplayNameViewController.swift in Sources */,
@@ -1543,6 +1552,7 @@
 				FEA8D6621F30F54B0077C12F /* XmppService.swift in Sources */,
 				FEF19F0A2347619D005CFE9A /* TasksQueue.swift in Sources */,
 				FE8DD9C7221B15DC0090F5AA /* AbstractRosterViewController.swift in Sources */,
+				9FC8AB872917F13500AAF50C /* NotificationEncryptionKeys.swift in Sources */,
 				E9AA502F26E1277D0005F497 /* MKMapExtension.swift in Sources */,
 				FEA7BF5D21E50CAB00D9E36C /* JingleManager_Session.swift in Sources */,
 				FE507A1A1CDB7B3B001A015C /* DBChatStore.swift in Sources */,
@@ -2194,6 +2204,7 @@
 					"$(SDK_DIR)/usr/include/libxml2/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Snikket/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2216,7 +2227,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Snikket/Snikket.entitlements;
+				CODE_SIGN_ENTITLEMENTS = OtherhomeRelease.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 10;
@@ -2234,6 +2245,7 @@
 					"$(SDK_DIR)/usr/include/libxml2/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Snikket/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

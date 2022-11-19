@@ -39,24 +39,7 @@ class NotificationService: UNNotificationServiceExtension {
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         
         debug("Received push!");
-        /*테스트용 코드, 잘 동작하면 이 부분 들어내고 아래 주석 처리한 블록 살릴 것*/
-        self.contentHandler = contentHandler
-        bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
-        if let bestAttemptContent = bestAttemptContent {
-            // Modify the notification content here...
-            bestAttemptContent.title = "OTHERHOME"
-            bestAttemptContent.body = "메세지"
-            
-            
-            if let userDefault = UserDefaults(suiteName: "AppGroupsName"){
-                let randomNum = Int.random(in: 0...100)
-                userDefault.set(randomNum, forKey: "test")
-                userDefault.synchronize()
-            }
-            contentHandler(bestAttemptContent)
-        }
-        /* 위 테스트 잘 되면 아래 주석 블록 살리기 */
-        /*
+        
         if let bestAttemptContent = bestAttemptContent {
             bestAttemptContent.sound = UNNotificationSound.default;
             bestAttemptContent.categoryIdentifier = "MESSAGE";
@@ -111,7 +94,7 @@ class NotificationService: UNNotificationServiceExtension {
 //                debug("Could not schedule app refresh: \(error)")
 //            }
 //        }
-         */
+         /* */
     }
     
 //    func updateNotification(content: UNMutableNotificationContent, account: BareJID, unread: Int, sender: JID, type kind: Payload.Kind, nickname: String?, body: String) {
