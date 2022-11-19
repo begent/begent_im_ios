@@ -21,6 +21,7 @@
 
 import Foundation
 import OpenSSL
+import TigaseSwift
 
 open class Cipher {
     
@@ -261,6 +262,7 @@ extension Cipher {
             }
             
             let limit = min(size, self.limit - self.count);
+            
             guard limit > 0 else {
                 return .ended;
             }
@@ -271,6 +273,8 @@ extension Cipher {
                 return .ended;
             }
             count = count + read;
+            print("read chunk:", read);
+            
             return .data(Data(bytes: &buf, count: read));
         }
         
@@ -283,6 +287,7 @@ extension Cipher {
             guard read > 0 else {
                 return nil;
             }
+            print("read authTag:", read);
             return Data(bytes: &buf, count: read);
         }
         

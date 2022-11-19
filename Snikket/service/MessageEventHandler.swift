@@ -81,6 +81,7 @@ class MessageEventHandler: XmppServiceEventHandler {
     }
  
     func handle(event: Event) {
+        print("all print : ", event);
         switch event {
         case let e as MessageModule.MessageReceivedEvent:
             guard e.message.from != nil, let account = e.sessionObject.userBareJid else {

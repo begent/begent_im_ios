@@ -260,7 +260,8 @@ open class AccountManager {
         
         open var pushNotifications: Bool {
             get {
-                return (data["pushNotifications"] as? Bool) ?? false;
+                //return (data["pushNotifications"] as? Bool) ?? false;
+                return true;
             }
             set {
                 data["pushNotifications"] = newValue as AnyObject?;
@@ -270,10 +271,11 @@ open class AccountManager {
         open var pushSettings: SiskinPushNotificationsModule.PushSettings? {
             get {
                 guard let settings = SiskinPushNotificationsModule.PushSettings(dictionary: data["push"] as? [String: Any]) else {
-                    guard let pushServiceNode = self.pushServiceNode, let deviceId = Settings.DeviceToken.string() else {
-                        return nil;
-                    }
-                    return SiskinPushNotificationsModule.PushSettings(jid: self.pushServiceJid ?? XmppService.pushServiceJid, node: pushServiceNode, deviceId: deviceId, encryption: false, maxSize: nil);
+//                    guard let pushServiceNode = self.pushServiceNode, let deviceId = Settings.DeviceToken.string() else {
+//
+//                    return nil;
+//                    }
+                    return SiskinPushNotificationsModule.PushSettings(jid: self.pushServiceJid ?? XmppService.pushServiceJid, node: "register-push-apns"/*pushServiceNode*/, deviceId: PushEventHandler.instance.deviceId ?? "dummy_device_id", encryption: false, maxSize: nil);
                 }
                 return settings;
             }

@@ -39,7 +39,7 @@ open class XmppService: Logger, EventHandler {
     
     // TODO: adjust me!!
     //public static let pushServiceJid = JID("push-ios.snikket.net");
-    public static let pushServiceJid = JID("otherhome.au");
+    public static let pushServiceJid = JID("push.otherhome.au");
     
     public static let instance = XmppService();
     public let tasksQueue = KeyedTasksQueue();
@@ -694,6 +694,7 @@ open class XmppService: Logger, EventHandler {
             _ = client.modulesManager.register(MixModule(channelManager: DefaultChannelManager(context: client.context, store: channelStore)));
             channelStore.initialize();
             _ = client.modulesManager.register(AdHocCommandsModule());
+            _ = client.modulesManager.register(AdHocCommandsModule_Jr());
             _ = client.modulesManager.register(SiskinPushNotificationsModule(defaultPushServiceJid: XmppService.pushServiceJid, provider: SiskinPushNotificationsModuleProvider()));
             _ = client.modulesManager.register(HttpFileUploadModule());
             _ = client.modulesManager.register(MessageDeliveryReceiptsModule());
