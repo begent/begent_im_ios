@@ -2204,6 +2204,7 @@
 					"$(SDK_DIR)/usr/include/libxml2/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Snikket/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Otherhome;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2245,6 +2246,7 @@
 					"$(SDK_DIR)/usr/include/libxml2/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Snikket/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Otherhome;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
