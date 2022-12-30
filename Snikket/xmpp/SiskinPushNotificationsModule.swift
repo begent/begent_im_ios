@@ -94,7 +94,7 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
         self.defaultPushServiceJid = defaultPushServiceJid;
         self.provider = provider;
         //
-        self.shouldEnable = true;
+        //self.shouldEnable = false;
         //
         super.init();
     }
@@ -151,6 +151,9 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
         return extensions;
     }
 
+    
+
+//
     open class RegistrationResult {
         
         public let node: String;
@@ -204,6 +207,21 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
         });
     }
 
+    
+    /*org source
+     
+     open func registerDeviceAndEnable(deviceId: String, pushkitDeviceId: String? = nil, pushServiceJid: JID, completionHandler: @escaping (Result<PushSettings,ErrorCondition>)->Void) {
+         self.registerDevice(serviceJid: pushServiceJid, provider: self.providerId, deviceId: deviceId, pushkitDeviceId: pushkitDeviceId, completionHandler: { (result) in
+             switch result {
+             case .success(let data):
+                 self.enable(serviceJid: pushServiceJid, node: data.node, deviceId: deviceId, pushkitDeviceId: pushkitDeviceId, features: data.features ?? [], maxSize: data.maxPayloadSize, completionHandler: completionHandler);
+             case .failure(let err):
+                 completionHandler(.failure(err));
+             }
+         });
+     }
+     
+     */
     open func registerDeviceAndEnable(deviceId: String, pushkitDeviceId: String? = nil, pushServiceJid: JID, completionHandler: @escaping (Result<PushSettings,ErrorCondition>)->Void) {
         
 
