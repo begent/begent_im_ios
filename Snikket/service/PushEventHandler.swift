@@ -25,7 +25,7 @@ import TigaseSwift
 open class PushEventHandler: XmppServiceEventHandler {
     
     public static func unregisterDevice(from pushServiceJid: BareJID, account: BareJID, deviceId: String, completionHandler: @escaping (Result<Void,ErrorCondition>)->Void) {
-        guard let url = URL(string: "https://\(pushServiceJid.stringValue)/unregister-device/\(pushServiceJid.stringValue)") else {
+        guard let url = URL(string: "https://\(pushServiceJid.stringValue)/unregister-push-apns/\(pushServiceJid.stringValue)") else {
             completionHandler(.failure(.service_unavailable));
             return;
         }

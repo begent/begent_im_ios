@@ -207,6 +207,22 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
         });
     }
 
+    func _unregisterDevice(serviceJid: JID, provider: String, deviceId: String, completionHandler: @escaping (Result<Void, ErrorCondition>)->Void) {
+        guard let adhocModule: AdHocCommandsModule = context.modulesManager.getModule(AdHocCommandsModule.ID) else {
+            completionHandler(.failure(ErrorCondition.undefined_condition));
+            return;
+        }
+        
+        let data = JabberDataElement(type: .submit);
+        data.addField(TextSingleField(name: "provider", value: provider));
+        data.addField(TextSingleField(name: "device-id", value: deviceId));
+        
+        adhocModule.execute(on: serviceJid, command: "unregister-push-apns", action: .execute, data: data, onSuccess: { (stanza, resultData) in
+            completionHandler(.success(Void()));
+        }, onError: { error in
+            completionHandler(.failure(error ?? ErrorCondition.undefined_condition));
+        })
+    }
     
     /*org source
      
@@ -319,7 +335,7 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
                 }
                 completionHandler(.success(settings));
             case .failure(let err):
-                self.unregisterDevice(serviceJid: serviceJid, provider: self.providerId, deviceId: deviceId, completionHandler: { result in
+                self._unregisterDevice(serviceJid: serviceJid, provider: self.providerId, deviceId: deviceId, completionHandler: { result in
                     print("unregistered device:", result);
                     completionHandler(.failure(err));
                 });
@@ -371,7 +387,7 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
                     resultHandler(.failure(err));
                 }
             });
-            self.unregisterDevice(serviceJid: settings.jid, provider: self.providerId, deviceId: settings.deviceId, completionHandler: resultHandler);
+            self._unregisterDevice(serviceJid: settings.jid, provider: self.providerId, deviceId: settings.deviceId, completionHandler: resultHandler);
         }
     }
     
