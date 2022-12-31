@@ -94,7 +94,7 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
         self.defaultPushServiceJid = defaultPushServiceJid;
         self.provider = provider;
         //
-        //self.shouldEnable = false;
+        self.shouldEnable = true;
         //
         super.init();
     }
