@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aj1-cs-tk1">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="658"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="654"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gir-dx-gTh">
                                                 <rect key="frame" x="70" y="70" width="288" height="300"/>
@@ -97,7 +97,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="is0-gN-a4J">
-                                                <rect key="frame" x="124" y="604" width="180" height="34"/>
+                                                <rect key="frame" x="124" y="600" width="180" height="34"/>
                                                 <color key="backgroundColor" name="snikketBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <inset key="contentEdgeInsets" minX="50" minY="8" maxX="50" maxY="8"/>
@@ -109,9 +109,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xm-uz-gIu">
-                                                <rect key="frame" x="124" y="550" width="180" height="34"/>
+                                                <rect key="frame" x="124" y="550" width="180" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="-100" id="IdX-2Q-SyJ"/>
+                                                    <constraint firstAttribute="height" constant="30" id="IdX-2Q-SyJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <inset key="contentEdgeInsets" minX="50" minY="8" maxX="50" maxY="8"/>
