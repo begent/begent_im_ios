@@ -135,22 +135,23 @@ class VCardEditViewController: UITableViewController, UIImagePickerControllerDel
     }
     
     @objc func photoClicked() {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet);
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Take photo", comment: "Action: take a photo to use as a profile picture"), style: .default, handler: { (action) in
-                self.selectPhoto(.camera);
-            }));
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Select photo", comment: "Action: open file picker to select a photo to use as a profile picture"), style: .default, handler: { (action) in
-                self.selectPhoto(.photoLibrary);
-            }));
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil));
-            let cell = self.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! VCardAvatarEditCell;
-            alert.popoverPresentationController?.sourceView = cell.avatarView;
-            alert.popoverPresentationController?.sourceRect = cell.avatarView!.bounds;
-            present(alert, animated: true, completion: nil);
-        } else {
-            selectPhoto(.photoLibrary);
-        }
+//hidden change avatar
+//        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+//            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet);
+//            alert.addAction(UIAlertAction(title: NSLocalizedString("Take photo", comment: "Action: take a photo to use as a profile picture"), style: .default, handler: { (action) in
+//                self.selectPhoto(.camera);
+//            }));
+//            alert.addAction(UIAlertAction(title: NSLocalizedString("Select photo", comment: "Action: open file picker to select a photo to use as a profile picture"), style: .default, handler: { (action) in
+//                self.selectPhoto(.photoLibrary);
+//            }));
+//            alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil));
+//            let cell = self.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! VCardAvatarEditCell;
+//            alert.popoverPresentationController?.sourceView = cell.avatarView;
+//            alert.popoverPresentationController?.sourceRect = cell.avatarView!.bounds;
+//            present(alert, animated: true, completion: nil);
+//        } else {
+//            selectPhoto(.photoLibrary);
+//        }
     }
     
     func selectPhoto(_ source: UIImagePickerController.SourceType) {

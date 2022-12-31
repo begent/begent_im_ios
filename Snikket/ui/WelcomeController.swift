@@ -32,7 +32,7 @@ class WelcomeController: UIViewController, QRScannerViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         let text = NSMutableAttributedString(attributedString: textView.attributedText);
-        text.addAttribute(.font, value: UIFont.systemFont(ofSize: UIFont.systemFontSize, weight: .semibold), range: NSRange(location: 0, length: 7));
+        text.addAttribute(.font, value: UIFont.systemFont(ofSize: UIFont.systemFontSize, weight: .semibold), range: NSRange(location: 0, length: 9));
         if #available(iOS 13.0, *) {
             text.addAttribute(.foregroundColor, value: UIColor.label, range: NSRange(location: 0, length: text.length));
             text.addAttribute(.backgroundColor, value: UIColor.systemBackground, range: NSRange(location: 0, length: text.length));
@@ -49,7 +49,7 @@ class WelcomeController: UIViewController, QRScannerViewDelegate {
     }
     
     @IBAction func learnMoreTapped(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://snikket.org/app/learn")!);
+        UIApplication.shared.open(URL(string: "https://otherhome.com.au")!);
     }
     
     @IBAction func signInTapped(_ sender: Any) {

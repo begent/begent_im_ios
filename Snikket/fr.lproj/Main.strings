@@ -71,7 +71,7 @@
 "Q28-Ig-9NP.headerTitle" = "PRÉSENCE";
 
 /* Class = "UITableViewSection"; headerTitle = "JID"; ObjectID = "Qgj-eQ-geg"; */
-"Qgj-eQ-geg.headerTitle" = "Identifiant Jabber";
+"Qgj-eQ-geg.headerTitle" = "Otherhome ID";
 
 /* Class = "UILabel"; text = "Clear History"; ObjectID = "qjs-BY-Nid"; */
 "qjs-BY-Nid.text" = "Supprimer l'historique";

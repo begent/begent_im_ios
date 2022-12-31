@@ -89,7 +89,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ];
         UNUserNotificationCenter.current().setNotificationCategories(Set(categories));
         application.registerForRemoteNotifications();
-        CallManager.initializeCallManager();
+//remove voip
+//        CallManager.initializeCallManager();
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.newMessage), name: DBChatHistoryStore.MESSAGE_NEW, object: nil);
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.unreadMessagesCountChanged), name: DBChatStore.UNREAD_MESSAGES_COUNT_CHANGED, object: nil);
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.serverCertificateError), name: XmppService.SERVER_CERTIFICATE_ERROR, object: nil);
@@ -219,7 +220,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
-        CallManager.initializeCallManager();
+//remove voip
+//        CallManager.initializeCallManager();
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         UNUserNotificationCenter.current().getDeliveredNotifications { (notifications) in
             let toDiscard = notifications.filter({(notification) in
@@ -772,3 +774,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+/////////////////
+@available(iOS 10, *)
+extension AppDelegate : UNUserNotificationCenterDelegate {
+    // * iOS 10 devices foreground에서 notifications 을 받을 경우 호출되는 함수
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // * 푸시 정보를 가져옴
+        
+        let userInfo = notification.request.content.userInfo
+        // * 푸시 정보 출력
+        print(userInfo)
+        
+        // * 전달 받은 Push에서 Push에 사용할 기능들 선택 부분
+        
+        //    - alert, badge, sound
+        
+        //    - 아래 항목에서 alert 를 지울 경우 : Push는 표시되지 않습니다.
+        
+        //    - 아래 항목에서 sound를 지울 경우 : 소리 및 진동이 들리지 않습니다.
+        
+        //    - 아래 항목에서 badge를 지울경우 : 앱에 배지표시가 되지 않습니다.
+        
+        completionHandler([.badge,.alert,.sound])
+    }
+    
+}
+////////////////
