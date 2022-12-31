@@ -163,17 +163,7 @@
                             <constraint firstItem="GyN-ba-nvs" firstAttribute="top" secondItem="bgi-Je-nna" secondAttribute="top" id="xf8-9E-F4g"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Otherhome" id="Pr0-Qp-NEQ">
-                        <barButtonItem key="rightBarButtonItem" title="Scan barcode" image="qrCode" id="i2u-OL-UUY">
-                            <color key="tintColor" name="tintColor"/>
-                            <attributedString key="userComments">
-                                <fragment content="Action button to scan QR code"/>
-                            </attributedString>
-                            <connections>
-                                <action selector="startScan:" destination="0Ih-Lt-06h" id="06Q-v1-ogO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Otherhome" id="Pr0-Qp-NEQ"/>
                     <connections>
                         <outlet property="learnMoreButton" destination="9Xm-uz-gIu" id="oXV-d4-fzc"/>
                         <outlet property="signInButton" destination="is0-gN-a4J" id="SnN-Xe-hE9"/>
@@ -210,7 +200,6 @@
     </scenes>
     <resources>
         <image name="appLogo" width="1024" height="1024"/>
-        <image name="qrCode" width="24" height="24"/>
         <namedColor name="chatslistBackground">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
