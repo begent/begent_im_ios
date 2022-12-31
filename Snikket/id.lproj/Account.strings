@@ -80,10 +80,10 @@
 "R0m-k2-q64.title" = "Lanjut";
 
 /* Class = "UITableViewSection"; footerTitle = "Enter your account JID"; ObjectID = "SKG-bP-NPK"; */
-"SKG-bP-NPK.footerTitle" = "Masukkan JID akun anda";
+"SKG-bP-NPK.footerTitle" = "Masukkan ID akun anda";
 
 /* Class = "UITableViewSection"; headerTitle = " XMPP ID"; ObjectID = "SKG-bP-NPK"; */
-"SKG-bP-NPK.headerTitle" = " XMPP ID";
+"SKG-bP-NPK.headerTitle" = " Otherhome ID";
 
 /* Class = "UILabel"; text = "None"; ObjectID = "StS-4J-0Uu"; Note = "Default value for telephony provider (None)"; */
 "StS-4J-0Uu.text" = "Tidak ada";
