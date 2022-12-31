@@ -308,12 +308,14 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
         let extensions: [PushNotificationsModuleExtension] = self.prepareExtensions(componentSupportsEncryption: features.contains(TigasePushNotificationsModule.Encryption.XMLNS), maxSize: maxSize);
         
         let newHash = hash(extensions: extensions);
+        /*
         if let oldSettings = self.pushSettings {
             guard newHash != AccountSettings.pushHash(self.context.sessionObject.userBareJid!).int() else {
                 completionHandler(.success(oldSettings));
                 return;
             }
         }
+        */
         
         let encryption = extensions.first(where: { ext in
             return ext is TigasePushNotificationsModule.Encryption;
