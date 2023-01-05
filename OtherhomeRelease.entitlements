@@ -8,7 +8,6 @@
 	<array>
 		<string>group.bgent.otherhome.ios.NotificationService</string>
 		<string>group.bgent.otherhome.ios.Shared</string>
-		<string>group.bgent.otherhome.ios.Share</string>
 	</array>
 	<key>keychain-access-groups</key>
 	<array>

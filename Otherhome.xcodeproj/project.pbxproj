@@ -23,6 +23,8 @@
 		379D914A26E8A0E300B877CA /* db-schema-15.sql in Resources */ = {isa = PBXBuildFile; fileRef = 379D914926E8A0E300B877CA /* db-schema-15.sql */; };
 		379D914C26E8A29800B877CA /* DBLastMessageSyncStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D914B26E8A29800B877CA /* DBLastMessageSyncStore.swift */; };
 		37B93BDF2711792300B943D0 /* TelephonyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B93BDE2711792300B943D0 /* TelephonyManager.swift */; };
+		9F320CFF296357CA00E7CC5F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F320CFE296357CA00E7CC5F /* NotificationService.swift */; };
+		9F320D03296357CA00E7CC5F /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9F320CFC296357CA00E7CC5F /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9FA510DE2917F6FD008F0BB4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE759FA32370ACA4001E78D9 /* NotificationService.swift */; };
 		9FC8AB872917F13500AAF50C /* NotificationEncryptionKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75A007237585DC001E78D9 /* NotificationEncryptionKeys.swift */; };
 		E928AD4326D6A08A00F29F93 /* db-schema-14.sql in Resources */ = {isa = PBXBuildFile; fileRef = E928AD4226D6A08A00F29F93 /* db-schema-14.sql */; };
@@ -66,7 +68,6 @@
 		FE2332E3242CE8D600008ED4 /* ChannelBlockedUsersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2332E2242CE8D600008ED4 /* ChannelBlockedUsersController.swift */; };
 		FE233CD521E6846E00099281 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE233CD421E6846E00099281 /* CameraPreviewView.swift */; };
 		FE233CDD21EA062E00099281 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE233CDC21EA062E00099281 /* AboutController.swift */; };
-		FE258EAA1F3B8BC90042CED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE258EA91F3B8BC90042CED9 /* Assets.xcassets */; };
 		FE2809812167CE18002F5BD0 /* server_features_list.xml in Resources */ = {isa = PBXBuildFile; fileRef = FE2809802167CE18002F5BD0 /* server_features_list.xml */; };
 		FE2809832167CF1B002F5BD0 /* ServerFeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2809822167CF1B002F5BD0 /* ServerFeaturesViewController.swift */; };
 		FE2D481A24505F1600C13CE5 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D481924505F1600C13CE5 /* CallManager.swift */; };
@@ -95,12 +96,6 @@
 		FE4071E821E2653700F09B58 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4071E721E2653700F09B58 /* RoundButton.swift */; };
 		FE43E43823BF3DE80079BD9B /* ChatAttachementsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43E43723BF3DE80079BD9B /* ChatAttachementsController.swift */; };
 		FE43EB551F3CC55900A4CAAD /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43EB541F3CC55900A4CAAD /* ImageCache.swift */; };
-		FE4DDF561F39E0B500A4CE5A /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4DDF551F39E0B500A4CE5A /* ShareViewController.swift */; };
-		FE4DDF591F39E0B500A4CE5A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4DDF571F39E0B500A4CE5A /* MainInterface.storyboard */; };
-		FE4DDF641F3A181B00A4CE5A /* AccountsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4DDF631F3A181B00A4CE5A /* AccountsTableViewController.swift */; };
-		FE4DDF661F3A207200A4CE5A /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4DDF651F3A207200A4CE5A /* AccountTableViewCell.swift */; };
-		FE4DDF681F3A403900A4CE5A /* RecipientsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4DDF671F3A403900A4CE5A /* RecipientsSelectionViewController.swift */; };
-		FE4DDF6A1F3A44AC00A4CE5A /* RecipientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4DDF691F3A44AC00A4CE5A /* RecipientTableViewCell.swift */; };
 		FE5079F01CD3CA91001A015C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5079EF1CD3CA91001A015C /* Security.framework */; };
 		FE507A151CDB7B3B001A015C /* ChatsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5079FE1CDB7B3B001A015C /* ChatsListTableViewCell.swift */; };
 		FE507A161CDB7B3B001A015C /* ChatsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5079FF1CDB7B3B001A015C /* ChatsListViewController.swift */; };
@@ -129,14 +124,11 @@
 		FE719E7C22730DC3007CEEC9 /* OMEMOIdentityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE719E7B22730DC3007CEEC9 /* OMEMOIdentityTableViewCell.swift */; };
 		FE719E7E2274D20D007CEEC9 /* OMEMOFingerprintsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE719E7D2274D20D007CEEC9 /* OMEMOFingerprintsController.swift */; };
 		FE74D510234A4E1F001A925B /* ChatTableViewSystemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE74D50F234A4E1F001A925B /* ChatTableViewSystemCell.swift */; };
-		FE759FA82370ACA4001E78D9 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FE759FA12370ACA4001E78D9 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FE759FC92370B2A4001E78D9 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = FE759FC72370B2A4001E78D9 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE759FCC2370B2A4001E78D9 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE759FC52370B2A4001E78D9 /* Shared.framework */; };
 		FE759FCD2370B2A4001E78D9 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE759FC52370B2A4001E78D9 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FE759FD12370B2F2001E78D9 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE759FC52370B2A4001E78D9 /* Shared.framework */; };
 		FE759FDB2370B384001E78D9 /* Cipher+AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE759FDA2370B384001E78D9 /* Cipher+AES.swift */; };
 		FE759FDE2371989B001E78D9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE759FDD2371988B001E78D9 /* libsqlite3.tbd */; };
-		FE759FE22371C83D001E78D9 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE759FC52370B2A4001E78D9 /* Shared.framework */; };
 		FE759FE82371C972001E78D9 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE759FE72371C966001E78D9 /* libxml2.tbd */; };
 		FE759FE92371DDD1001E78D9 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE507A051CDB7B3B001A015C /* DBManager.swift */; };
 		FE759FEB2371F11F001E78D9 /* DBConnection_main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE759FEA2371F11F001E78D9 /* DBConnection_main.swift */; };
@@ -239,35 +231,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FE4DDF5B1F39E0B500A4CE5A /* PBXContainerItemProxy */ = {
+		9F320D01296357CA00E7CC5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FE94E5191CCBA74F00FAE755 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FE4DDF521F39E0B500A4CE5A;
-			remoteInfo = "SiskinIM - Share";
-		};
-		FE759FA62370ACA4001E78D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FE94E5191CCBA74F00FAE755 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FE759FA02370ACA4001E78D9;
-			remoteInfo = NotificationService;
+			remoteGlobalIDString = 9F320CFB296357CA00E7CC5F;
+			remoteInfo = org.bgent.otherhome.ios.NotificationService;
 		};
 		FE759FCA2370B2A4001E78D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FE94E5191CCBA74F00FAE755 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FE759FC42370B2A4001E78D9;
-			remoteInfo = Shared;
-		};
-		FE759FD32370B2F2001E78D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FE94E5191CCBA74F00FAE755 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FE759FC42370B2A4001E78D9;
-			remoteInfo = Shared;
-		};
-		FE759FE42371C83D001E78D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FE94E5191CCBA74F00FAE755 /* Project object */;
 			proxyType = 1;
@@ -283,7 +254,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FE759FA82370ACA4001E78D9 /* NotificationService.appex in Embed App Extensions */,
+				9F320D03296357CA00E7CC5F /* NotificationService.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -400,6 +371,10 @@
 		59D7B86C276489C600412972 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = id; path = id.lproj/Info.plist; sourceTree = "<group>"; };
 		59D7B86D276489C600412972 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		59D7B86F27648A5700412972 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Account.strings; sourceTree = "<group>"; };
+		9F320CFC296357CA00E7CC5F /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F320CFE296357CA00E7CC5F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		9F320D00296357CA00E7CC5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F320D07296357F900E7CC5F /* org.bgent.otherhome.ios.NotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = org.bgent.otherhome.ios.NotificationService.entitlements; sourceTree = "<group>"; };
 		9FA510DC2917F40C008F0BB4 /* OtherhomeRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OtherhomeRelease.entitlements; sourceTree = "<group>"; };
 		E928AD4226D6A08A00F29F93 /* db-schema-14.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "db-schema-14.sql"; sourceTree = "<group>"; };
 		E95AA70126D38B6E00A38D44 /* DisplayNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNameViewController.swift; sourceTree = "<group>"; };
@@ -472,7 +447,6 @@
 		FE43E43723BF3DE80079BD9B /* ChatAttachementsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAttachementsController.swift; sourceTree = "<group>"; };
 		FE43EB541F3CC55900A4CAAD /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		FE4496C31F87911C009F649C /* db-schema-3.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = "db-schema-3.sql"; sourceTree = "<group>"; };
-		FE4DDF531F39E0B500A4CE5A /* Otherhome - Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Otherhome - Share.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4DDF551F39E0B500A4CE5A /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		FE4DDF581F39E0B500A4CE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		FE4DDF5A1F39E0B500A4CE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -512,7 +486,6 @@
 		FE719E7B22730DC3007CEEC9 /* OMEMOIdentityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMEMOIdentityTableViewCell.swift; sourceTree = "<group>"; };
 		FE719E7D2274D20D007CEEC9 /* OMEMOFingerprintsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMEMOFingerprintsController.swift; sourceTree = "<group>"; };
 		FE74D50F234A4E1F001A925B /* ChatTableViewSystemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewSystemCell.swift; sourceTree = "<group>"; };
-		FE759FA12370ACA4001E78D9 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE759FA32370ACA4001E78D9 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FE759FA52370ACA4001E78D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE759FC52370B2A4001E78D9 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -622,19 +595,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FE4DDF501F39E0B500A4CE5A /* Frameworks */ = {
+		9F320CF9296357CA00E7CC5F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE759FE22371C83D001E78D9 /* Shared.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE759F9E2370ACA4001E78D9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE759FD12370B2F2001E78D9 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +634,16 @@
 				FEE49DD22426879500900BBB /* channel */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		9F320CFD296357CA00E7CC5F /* org.bgent.otherhome.ios.NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				9F320D07296357F900E7CC5F /* org.bgent.otherhome.ios.NotificationService.entitlements */,
+				9F320CFE296357CA00E7CC5F /* NotificationService.swift */,
+				9F320D00296357CA00E7CC5F /* Info.plist */,
+			);
+			path = org.bgent.otherhome.ios.NotificationService;
 			sourceTree = "<group>";
 		};
 		FE01ADA11E214CEA00FA7E65 /* xmpp */ = {
@@ -952,6 +926,7 @@
 			isa = PBXGroup;
 			children = (
 				9FA510DC2917F40C008F0BB4 /* OtherhomeRelease.entitlements */,
+				9F320CFD296357CA00E7CC5F /* org.bgent.otherhome.ios.NotificationService */,
 				FE1908902584D69400CA049F /* Frameworks */,
 				FE759FA22370ACA4001E78D9 /* NotificationService */,
 				FE759FC62370B2A4001E78D9 /* Shared */,
@@ -968,9 +943,8 @@
 			isa = PBXGroup;
 			children = (
 				FE94E5211CCBA74F00FAE755 /* Otherhome.app */,
-				FE4DDF531F39E0B500A4CE5A /* Otherhome - Share.appex */,
-				FE759FA12370ACA4001E78D9 /* NotificationService.appex */,
 				FE759FC52370B2A4001E78D9 /* Shared.framework */,
+				9F320CFC296357CA00E7CC5F /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1119,40 +1093,21 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FE4DDF521F39E0B500A4CE5A /* Otherhome - Share */ = {
+		9F320CFB296357CA00E7CC5F /* NotificationService */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE4DDF5E1F39E0B600A4CE5A /* Build configuration list for PBXNativeTarget "Otherhome - Share" */;
+			buildConfigurationList = 9F320D04296357CA00E7CC5F /* Build configuration list for PBXNativeTarget "NotificationService" */;
 			buildPhases = (
-				FE4DDF4F1F39E0B500A4CE5A /* Sources */,
-				FE4DDF501F39E0B500A4CE5A /* Frameworks */,
-				FE4DDF511F39E0B500A4CE5A /* Resources */,
+				9F320CF8296357CA00E7CC5F /* Sources */,
+				9F320CF9296357CA00E7CC5F /* Frameworks */,
+				9F320CFA296357CA00E7CC5F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FE759FE52371C83D001E78D9 /* PBXTargetDependency */,
-			);
-			name = "Otherhome - Share";
-			productName = "SiskinIM - Share";
-			productReference = FE4DDF531F39E0B500A4CE5A /* Otherhome - Share.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		FE759FA02370ACA4001E78D9 /* NotificationService */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE759FAB2370ACA4001E78D9 /* Build configuration list for PBXNativeTarget "NotificationService" */;
-			buildPhases = (
-				FE759F9D2370ACA4001E78D9 /* Sources */,
-				FE759F9E2370ACA4001E78D9 /* Frameworks */,
-				FE759F9F2370ACA4001E78D9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FE759FD42370B2F2001E78D9 /* PBXTargetDependency */,
 			);
 			name = NotificationService;
-			productName = NotificationService;
-			productReference = FE759FA12370ACA4001E78D9 /* NotificationService.appex */;
+			productName = org.bgent.otherhome.ios.NotificationService;
+			productReference = 9F320CFC296357CA00E7CC5F /* NotificationService.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		FE759FC42370B2A4001E78D9 /* Shared */ = {
@@ -1192,9 +1147,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				FE4DDF5C1F39E0B500A4CE5A /* PBXTargetDependency */,
-				FE759FA72370ACA4001E78D9 /* PBXTargetDependency */,
 				FE759FCB2370B2A4001E78D9 /* PBXTargetDependency */,
+				9F320D02296357CA00E7CC5F /* PBXTargetDependency */,
 			);
 			name = Otherhome;
 			packageProductDependencies = (
@@ -1210,26 +1164,12 @@
 		FE94E5191CCBA74F00FAE755 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Begent Group";
 				TargetAttributes = {
-					FE4DDF521F39E0B500A4CE5A = {
-						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-							com.apple.Keychain = {
-								enabled = 1;
-							};
-						};
-					};
-					FE759FA02370ACA4001E78D9 = {
-						CreatedOnToolsVersion = 11.2;
-						ProvisioningStyle = Automatic;
+					9F320CFB296357CA00E7CC5F = {
+						CreatedOnToolsVersion = 14.2;
 					};
 					FE759FC42370B2A4001E78D9 = {
 						CreatedOnToolsVersion = 11.2;
@@ -1280,24 +1220,14 @@
 			projectRoot = "";
 			targets = (
 				FE94E5201CCBA74F00FAE755 /* Otherhome */,
-				FE4DDF521F39E0B500A4CE5A /* Otherhome - Share */,
-				FE759FA02370ACA4001E78D9 /* NotificationService */,
 				FE759FC42370B2A4001E78D9 /* Shared */,
+				9F320CFB296357CA00E7CC5F /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FE4DDF511F39E0B500A4CE5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE258EAA1F3B8BC90042CED9 /* Assets.xcassets in Resources */,
-				FE4DDF591F39E0B500A4CE5A /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE759F9F2370ACA4001E78D9 /* Resources */ = {
+		9F320CFA296357CA00E7CC5F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1399,22 +1329,11 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FE4DDF4F1F39E0B500A4CE5A /* Sources */ = {
+		9F320CF8296357CA00E7CC5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE4DDF661F3A207200A4CE5A /* AccountTableViewCell.swift in Sources */,
-				FE4DDF681F3A403900A4CE5A /* RecipientsSelectionViewController.swift in Sources */,
-				FE4DDF561F39E0B500A4CE5A /* ShareViewController.swift in Sources */,
-				FE4DDF6A1F3A44AC00A4CE5A /* RecipientTableViewCell.swift in Sources */,
-				FE4DDF641F3A181B00A4CE5A /* AccountsTableViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE759F9D2370ACA4001E78D9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				9F320CFF296357CA00E7CC5F /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1613,30 +1532,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FE4DDF5C1F39E0B500A4CE5A /* PBXTargetDependency */ = {
+		9F320D02296357CA00E7CC5F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FE4DDF521F39E0B500A4CE5A /* Otherhome - Share */;
-			targetProxy = FE4DDF5B1F39E0B500A4CE5A /* PBXContainerItemProxy */;
-		};
-		FE759FA72370ACA4001E78D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE759FA02370ACA4001E78D9 /* NotificationService */;
-			targetProxy = FE759FA62370ACA4001E78D9 /* PBXContainerItemProxy */;
+			target = 9F320CFB296357CA00E7CC5F /* NotificationService */;
+			targetProxy = 9F320D01296357CA00E7CC5F /* PBXContainerItemProxy */;
 		};
 		FE759FCB2370B2A4001E78D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FE759FC42370B2A4001E78D9 /* Shared */;
 			targetProxy = FE759FCA2370B2A4001E78D9 /* PBXContainerItemProxy */;
-		};
-		FE759FD42370B2F2001E78D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE759FC42370B2A4001E78D9 /* Shared */;
-			targetProxy = FE759FD32370B2F2001E78D9 /* PBXContainerItemProxy */;
-		};
-		FE759FE52371C83D001E78D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE759FC42370B2A4001E78D9 /* Shared */;
-			targetProxy = FE759FE42371C83D001E78D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1820,93 +1724,27 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FE4DDF5F1F39E0B600A4CE5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CODE_SIGN_ENTITLEMENTS = "Snikket - Share/Snikket - Share.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_TEAM = 7JK3BGG9B6;
-				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(SDK_DIR)/usr/include",
-					"$(SDK_DIR)/usr/include/libxml2",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Snikket - Share/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.Share2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "Snikket/SiskinIM-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		FE4DDF601F39E0B600A4CE5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CODE_SIGN_ENTITLEMENTS = "Snikket - Share/Snikket - Share.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_TEAM = 7JK3BGG9B6;
-				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(SDK_DIR)/usr/include",
-					"$(SDK_DIR)/usr/include/libxml2",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Snikket - Share/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.Share2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Snikket/SiskinIM-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		FE759FA92370ACA4001E78D9 /* Debug */ = {
+		9F320D05296357CA00E7CC5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				CODE_SIGN_ENTITLEMENTS = org.bgent.otherhome.ios.NotificationService/org.bgent.otherhome.ios.NotificationService.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7JK3BGG9B6;
-				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				HEADER_SEARCH_PATHS = (
-					"$(SDK_DIR)/usr/include",
-					"$(SDK_DIR)/usr/include/libxml2/**",
-				);
-				INFOPLIST_FILE = NotificationService/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = org.bgent.otherhome.ios.NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = org.bgent.otherhome.ios.NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Begent Group. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1915,38 +1753,37 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.NotificationService2;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "Snikket/SiskinIM-Bridging-Header.h";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		FE759FAA2370ACA4001E78D9 /* Release */ = {
+		9F320D06296357CA00E7CC5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				CODE_SIGN_ENTITLEMENTS = org.bgent.otherhome.ios.NotificationService/org.bgent.otherhome.ios.NotificationService.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7JK3BGG9B6;
-				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				HEADER_SEARCH_PATHS = (
-					"$(SDK_DIR)/usr/include",
-					"$(SDK_DIR)/usr/include/libxml2/**",
-				);
-				INFOPLIST_FILE = NotificationService/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = org.bgent.otherhome.ios.NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = org.bgent.otherhome.ios.NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Begent Group. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1954,10 +1791,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.NotificationService2;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Snikket/SiskinIM-Bridging-Header.h";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2002,7 +1839,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.Shared;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -2051,7 +1890,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.bgent.otherhome.ios.Shared;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2188,7 +2029,7 @@
 				CODE_SIGN_ENTITLEMENTS = Snikket/Snikket.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7JK3BGG9B6;
@@ -2235,7 +2076,7 @@
 				CODE_SIGN_ENTITLEMENTS = OtherhomeRelease.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 7JK3BGG9B6;
 				ENABLE_BITCODE = NO;
@@ -2277,20 +2118,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FE4DDF5E1F39E0B600A4CE5A /* Build configuration list for PBXNativeTarget "Otherhome - Share" */ = {
+		9F320D04296357CA00E7CC5F /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE4DDF5F1F39E0B600A4CE5A /* Debug */,
-				FE4DDF601F39E0B600A4CE5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FE759FAB2370ACA4001E78D9 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FE759FA92370ACA4001E78D9 /* Debug */,
-				FE759FAA2370ACA4001E78D9 /* Release */,
+				9F320D05296357CA00E7CC5F /* Debug */,
+				9F320D06296357CA00E7CC5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
