@@ -248,7 +248,7 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
                 let publishOptions = JabberDataElement(type: .submit);
                 publishOptions.addField(TextSingleField(name: "FORM_TYPE", value: "http://jabber.org/protocol/pubsub#publish-options"));
                 publishOptions.addField(TextSingleField(name: "secret", value: data.secret));
-                publishOptions.addField(TextSingleField(name: "sandbox", value: "true"));
+                publishOptions.addField(TextSingleField(name: "sandbox", value: "false"));
                 //<lucia
                 
                 self.enable(serviceJid: pushServiceJid, node: data.node, deviceId: deviceId, pushkitDeviceId: pushkitDeviceId, features: data.features ?? [], maxSize: data.maxPayloadSize, publishOptions: publishOptions, completionHandler: completionHandler);
