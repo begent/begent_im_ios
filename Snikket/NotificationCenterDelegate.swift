@@ -49,7 +49,8 @@ class NotificationCenterDelegate: NSObject, UNUserNotificationCenterDelegate {
                 NotificationCenter.default.post(name: Notification.Name("SUBSCRIPTION_REQUEST"), object: nil)
             }
         default:
-            completionHandler([.alert, .sound]);
+            return
+            //completionHandler([.alert, .sound]);
         }
     }
     

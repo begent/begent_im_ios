@@ -42,6 +42,32 @@ class AddAccountController: UITableViewController, UITextFieldDelegate {
     var accountValidatorTask: AccountValidatorTask?;
     
     var onAccountAdded: (() -> Void)?;
+
+    private func setCursorPosition(input: UITextField, position: Int) {
+        let position = input.position(from: input.beginningOfDocument, offset: position)!
+        input.selectedTextRange = input.textRange(from: position, to: position)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // replacementString : 방금 입력된 문자 하나, 붙여넣기 시에는 붙여넣어진 문자열 전체
+        // return -> 텍스트가 바뀌어야 한다면 true, 아니라면 false
+        // 이 메소드 내에서 textField.text는 현재 입력된 string이 붙기 전의 string
+
+        if (textField.isSecureTextEntry) {
+            return true;
+        }
+        
+        let strFormatter = String("@otherhome.au");
+        if let removeFormatter = textField.text?.replacingOccurrences(of: strFormatter, with: "") {
+            let beforeFormattedString = removeFormatter;
+            let formattedString = beforeFormattedString + string + strFormatter;
+            textField.text = formattedString;
+
+            setCursorPosition(input: textField, position: beforeFormattedString.count+1);
+            return false;
+        }
+        return true;
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -80,6 +106,7 @@ class AddAccountController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func jidTextFieldChanged(_ sender: UITextField) {
+       // jidTextField?.text = (jidTextField.text ?? )+String("au");
         updateSaveButtonState();
     }
     

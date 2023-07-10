@@ -31,13 +31,15 @@ class CallManager: NSObject, CXProviderDelegate {
     static var isAvailable: Bool {
         let userLocale = NSLocale.current
 
-        if (userLocale.regionCode?.contains("CN") ?? false) ||
+        //remove voip
+        /*if (userLocale.regionCode?.contains("CN") ?? false) ||
             (userLocale.regionCode?.contains("CHN") ?? false) {
 
             return false
         } else {
             return true
-        }
+        }*/
+        return false;
     }
     
     private(set) static var instance: CallManager? = nil;

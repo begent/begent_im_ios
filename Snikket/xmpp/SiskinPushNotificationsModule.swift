@@ -43,12 +43,12 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
             guard let jid = JID(dict["jid"] as? String), let node = dict["node"] as? String, let deviceId = dict["device"] as? String else {
                 return nil;
             }
-            self.init(jid: jid, node: node, deviceId: deviceId, pushkitDeviceId: dict["pushkitDevice"] as? String, encryption: dict["encryption"] as? Bool ?? false, maxSize: dict["maxSize"] as? Int);
+            self.init(jid: jid, node: "register-push-apns", deviceId: deviceId, pushkitDeviceId: dict["pushkitDevice"] as? String, encryption: dict["encryption"] as? Bool ?? false, maxSize: dict["maxSize"] as? Int);
         }
         
         init(jid: JID, node: String, deviceId: String, pushkitDeviceId: String? = nil, encryption: Bool, maxSize: Int?) {
             self.jid = jid;
-            self.node = node;
+            self.node = "register-push-apns";
             self.deviceId = deviceId;
             self.pushkitDeviceId = pushkitDeviceId;
             self.encryption = encryption;
@@ -93,6 +93,9 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
     public init(defaultPushServiceJid: JID, provider: SiskinPushNotificationsModuleProviderProtocol) {
         self.defaultPushServiceJid = defaultPushServiceJid;
         self.provider = provider;
+        //
+        self.shouldEnable = true;
+        //
         super.init();
     }
     
@@ -147,17 +150,143 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
         
         return extensions;
     }
+
     
+
+//
+    open class RegistrationResult {
+        
+        public let node: String;
+        public let features: [String]?;
+        public let maxPayloadSize: Int?;
+        
+        public let secret: String; //lucia
+        
+        init?(form resultData: JabberDataElement?) {
+            guard let node = (resultData?.getField(named: "node") as? TextSingleField)?.value else {
+                return nil;
+            }
+            self.node = node;
+            
+            //>lucia
+            guard let secret = (resultData?.getField(named: "secret") as? TextSingleField)?.value else {
+                return nil;
+            }
+            self.secret = secret;
+            //<lucia
+            
+            features = (resultData?.getField(named: "features") as? TextMultiField)?.value;
+            maxPayloadSize = Int((resultData?.getField(named: "max-payload-size") as? TextSingleField)?.value ?? "");
+        }
+        
+    }
+   
+    func _registerDevice(serviceJid: JID, provider: String, deviceId: String, pushkitDeviceId: String? = nil, completionHandler: @escaping (Result<RegistrationResult,ErrorCondition>)->Void) {
+        guard let adhocModule: AdHocCommandsModule_Jr = context.modulesManager.getModule(AdHocCommandsModule_Jr.ID) else {
+            completionHandler(.failure(ErrorCondition.undefined_condition));
+            return;
+        }
+        
+        let data = JabberDataElement(type: .submit);
+        data.addField(TextSingleField(name: "token", value: deviceId));
+        data.addField(TextSingleField(name: "device-id", value: deviceId));
+        if pushkitDeviceId != nil {
+            data.addField(TextSingleField(name: "device-second-token", value: pushkitDeviceId));
+        }
+        
+        adhocModule.execute(on: serviceJid, command: "register-push-apns", action: .execute, data: data, onSuccess: { (stanza, resultData) in
+            
+            guard let result = RegistrationResult(form: resultData) else {
+                completionHandler(.failure(.undefined_condition));
+                return;
+            }
+            
+            completionHandler(.success(result));
+        }, onError: { error in
+            completionHandler(.failure(error ?? ErrorCondition.undefined_condition));
+        });
+    }
+
+    func _unregisterDevice(serviceJid: JID, provider: String, deviceId: String, completionHandler: @escaping (Result<Void, ErrorCondition>)->Void) {
+        guard let adhocModule: AdHocCommandsModule = context.modulesManager.getModule(AdHocCommandsModule.ID) else {
+            completionHandler(.failure(ErrorCondition.undefined_condition));
+            return;
+        }
+        
+        let data = JabberDataElement(type: .submit);
+        data.addField(TextSingleField(name: "provider", value: provider));
+        data.addField(TextSingleField(name: "device-id", value: deviceId));
+        
+        adhocModule.execute(on: serviceJid, command: "unregister-push-apns", action: .execute, data: data, onSuccess: { (stanza, resultData) in
+            completionHandler(.success(Void()));
+        }, onError: { error in
+            completionHandler(.failure(error ?? ErrorCondition.undefined_condition));
+        })
+    }
+    
+    /*org source
+     
+     open func registerDeviceAndEnable(deviceId: String, pushkitDeviceId: String? = nil, pushServiceJid: JID, completionHandler: @escaping (Result<PushSettings,ErrorCondition>)->Void) {
+         self.registerDevice(serviceJid: pushServiceJid, provider: self.providerId, deviceId: deviceId, pushkitDeviceId: pushkitDeviceId, completionHandler: { (result) in
+             switch result {
+             case .success(let data):
+                 self.enable(serviceJid: pushServiceJid, node: data.node, deviceId: deviceId, pushkitDeviceId: pushkitDeviceId, features: data.features ?? [], maxSize: data.maxPayloadSize, completionHandler: completionHandler);
+             case .failure(let err):
+                 completionHandler(.failure(err));
+             }
+         });
+     }
+     
+     */
     open func registerDeviceAndEnable(deviceId: String, pushkitDeviceId: String? = nil, pushServiceJid: JID, completionHandler: @escaping (Result<PushSettings,ErrorCondition>)->Void) {
-        self.registerDevice(serviceJid: pushServiceJid, provider: self.providerId, deviceId: deviceId, pushkitDeviceId: pushkitDeviceId, completionHandler: { (result) in
+        
+
+        self._registerDevice(serviceJid: pushServiceJid, provider: self.providerId, deviceId: deviceId, pushkitDeviceId: pushkitDeviceId, completionHandler: { (result) in
             switch result {
             case .success(let data):
-                self.enable(serviceJid: pushServiceJid, node: data.node, deviceId: deviceId, pushkitDeviceId: pushkitDeviceId, features: data.features ?? [], maxSize: data.maxPayloadSize, completionHandler: completionHandler);
+                //>lucia
+                let publishOptions = JabberDataElement(type: .submit);
+                publishOptions.addField(TextSingleField(name: "FORM_TYPE", value: "http://jabber.org/protocol/pubsub#publish-options"));
+                publishOptions.addField(TextSingleField(name: "secret", value: data.secret));
+                publishOptions.addField(TextSingleField(name: "sandbox", value: "false"));
+                //<lucia
+                
+                self.enable(serviceJid: pushServiceJid, node: data.node, deviceId: deviceId, pushkitDeviceId: pushkitDeviceId, features: data.features ?? [], maxSize: data.maxPayloadSize, publishOptions: publishOptions, completionHandler: completionHandler);
             case .failure(let err):
                 completionHandler(.failure(err));
             }
         });
+             
     }
+    
+  /*/ /////////
+    open func registerDevice(serviceJid: JID, provider: String, deviceId: String, pushkitDeviceId: String? = nil, completionHandler: @escaping (Result<RegistrationResult,ErrorCondition>)->Void) {
+        guard let adhocModule: AdHocCommandsModule = context.modulesManager.getModule(AdHocCommandsModule.ID) else {
+            completionHandler(.failure(ErrorCondition.undefined_condition));
+            return;
+        }
+        
+        let data = JabberDataElement(type: .submit);
+        data.addField(TextSingleField(name: "register-push-apns", value: provider));
+        data.addField(TextSingleField(name: "device-id", value: deviceId));
+        if pushkitDeviceId != nil {
+            data.addField(TextSingleField(name: "device-second-token", value: pushkitDeviceId));
+        }
+        
+        adhocModule.execute(on: serviceJid, command: "register-device", action: .execute, data: data, onSuccess: { (stanza, resultData) in
+            
+            guard let result = RegistrationResult(form: resultData) else {
+                completionHandler(.failure(.undefined_condition));
+                return;
+            }
+            
+            completionHandler(.success(result));
+        }, onError: { error in
+            completionHandler(.failure(error ?? ErrorCondition.undefined_condition));
+        });
+    }
+    // ///////////
+   */
     
     open func reenable(pushSettings: PushSettings, completionHandler: @escaping (Result<PushSettings,ErrorCondition>)->Void) {
         self.enable(serviceJid: pushSettings.jid, node: pushSettings.node, deviceId: pushSettings.deviceId, pushkitDeviceId: pushSettings.pushkitDeviceId, features: pushSettings.encryption ? [TigasePushNotificationsModule.Encryption.XMLNS] : [], maxSize: pushSettings.maxSize, completionHandler: completionHandler);
@@ -179,12 +308,14 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
         let extensions: [PushNotificationsModuleExtension] = self.prepareExtensions(componentSupportsEncryption: features.contains(TigasePushNotificationsModule.Encryption.XMLNS), maxSize: maxSize);
         
         let newHash = hash(extensions: extensions);
+        /*
         if let oldSettings = self.pushSettings {
             guard newHash != AccountSettings.pushHash(self.context.sessionObject.userBareJid!).int() else {
                 completionHandler(.success(oldSettings));
                 return;
             }
         }
+        */
         
         let encryption = extensions.first(where: { ext in
             return ext is TigasePushNotificationsModule.Encryption;
@@ -192,7 +323,7 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
                 
         let settings = PushSettings(jid: serviceJid, node: node, deviceId: deviceId, pushkitDeviceId: pushkitDeviceId, encryption: encryption != nil, maxSize: maxSize);
 
-        self.enable(serviceJid: serviceJid, node: node, extensions: extensions, completionHandler: { (result) in
+        self.enable(serviceJid: serviceJid, node: node, extensions: extensions, publishOptions: publishOptions, completionHandler: { (result) in
             switch result {
             case .success(_):
                 let accountJid = self.context.sessionObject.userBareJid!;
@@ -206,7 +337,7 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
                 }
                 completionHandler(.success(settings));
             case .failure(let err):
-                self.unregisterDevice(serviceJid: serviceJid, provider: self.providerId, deviceId: deviceId, completionHandler: { result in
+                self._unregisterDevice(serviceJid: serviceJid, provider: self.providerId, deviceId: deviceId, completionHandler: { result in
                     print("unregistered device:", result);
                     completionHandler(.failure(err));
                 });
@@ -258,7 +389,7 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
                     resultHandler(.failure(err));
                 }
             });
-            self.unregisterDevice(serviceJid: settings.jid, provider: self.providerId, deviceId: settings.deviceId, completionHandler: resultHandler);
+            self._unregisterDevice(serviceJid: settings.jid, provider: self.providerId, deviceId: settings.deviceId, completionHandler: resultHandler);
         }
     }
     
@@ -266,6 +397,40 @@ open class SiskinPushNotificationsModule: TigasePushNotificationsModule {
         self.findPushComponent(requiredFeatures: ["urn:xmpp:push:0", self.providerId], completionHandler: completionHandler);
     }
     
+}
+
+open class AdHocCommandsModule_Jr:AdHocCommandsModule {
+    open override func execute(on to: JID?, command node: String, action: Action?, data: JabberDataElement?, onSuccess: @escaping (Stanza, JabberDataElement?)->Void, onError: @escaping (Stanza?,ErrorCondition?)->Void) {
+        let iq = Iq();
+        iq.type = .set;
+        iq.to = to;
+        
+        let command = Element(name: "command", xmlns: AdHocCommandsModule.COMMANDS_XMLNS);
+        command.setAttribute("node", value: node);
+        command.setAttribute("action", value: action?.rawValue);
+
+        if data != nil {
+            command.addChild(data!.submitableElement(type: XDataType.submit));
+        }
+        
+        iq.addChild(command);
+        
+        context.writer?.write(iq) { (stanza: Stanza?) in
+            var errorCondition:ErrorCondition?;
+            if let type = stanza?.type {
+                switch type {
+                case .result:
+                    onSuccess(stanza!, JabberDataElement(from: stanza!.findChild(name: "command", xmlns: AdHocCommandsModule.COMMANDS_XMLNS)?.findChild(name: "x", xmlns: "jabber:x:data")));
+                    return;
+                default:
+                    if let name = stanza!.element.findChild(name: "error")?.firstChild()?.name {
+                        errorCondition = ErrorCondition(rawValue: name);
+                    }
+                }
+            }
+            onError(stanza, errorCondition);
+        }
+    }
 }
 
 public protocol SiskinPushNotificationsModuleProviderProtocol {

@@ -25,7 +25,7 @@ import TigaseSwift
 open class PushEventHandler: XmppServiceEventHandler {
     
     public static func unregisterDevice(from pushServiceJid: BareJID, account: BareJID, deviceId: String, completionHandler: @escaping (Result<Void,ErrorCondition>)->Void) {
-        guard let url = URL(string: "https://\(pushServiceJid.stringValue)/unregister-device/\(pushServiceJid.stringValue)") else {
+        guard let url = URL(string: "https://\(pushServiceJid.stringValue)/unregister-push-apns/\(pushServiceJid.stringValue)") else {
             completionHandler(.failure(.service_unavailable));
             return;
         }
@@ -40,6 +40,7 @@ open class PushEventHandler: XmppServiceEventHandler {
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard error == nil else {
+                print("unregisterDevice", error ?? "unknown error");
                 completionHandler(.failure(.service_unavailable));
                 return;
             }
@@ -47,6 +48,7 @@ open class PushEventHandler: XmppServiceEventHandler {
                 completionHandler(.failure(.internal_server_error));
                 return;
             }
+            print("unregisterDevice", data);
             if payload.success {
                 completionHandler(.success(Void()));
             } else {
@@ -68,6 +70,8 @@ open class PushEventHandler: XmppServiceEventHandler {
     }
     
     public func handle(event: Event) {
+        print("PushEventHandler : ", event);
+        
         switch event {
         case let e as DiscoveryModule.AccountFeaturesReceivedEvent:
             updatePushRegistration(for: e.sessionObject.userBareJid!, features: e.features);
@@ -97,6 +101,7 @@ open class PushEventHandler: XmppServiceEventHandler {
                             });
                         case .failure(_):
                             // we need to try again later
+                            print("reregistration failed", result);
                             break;
                         }
                     });

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,15 +12,15 @@
         <!--Conversation Log Controller-->
         <scene sceneID="HAl-t0-eCR">
             <objects>
-                <viewController storyboardIdentifier="ConversationLogController" id="HlG-cR-6gR" customClass="ConversationLogController" customModule="Snikket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConversationLogController" id="HlG-cR-6gR" customClass="ConversationLogController" customModule="Otherhome" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZHU-a8-qOo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="conversationBackground"/>
                         <color key="separatorColor" name="conversationBackground"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewSystemCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewSystemCell" rowHeight="33" id="9wb-BJ-QeF" customClass="ChatTableViewSystemCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="33"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewSystemCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewSystemCell" rowHeight="33" id="9wb-BJ-QeF" customClass="ChatTableViewSystemCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="414" height="33"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="9wb-BJ-QeF" id="14Y-vA-IHJ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
@@ -45,14 +45,14 @@
                                     <outlet property="messageView" destination="L12-ol-EKe" id="tel-np-pPT"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewMeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewMeCell" rowHeight="33" id="GBK-nY-egT" customClass="ChatTableViewMeCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="77.5" width="414" height="33"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewMeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewMeCell" rowHeight="33" id="GBK-nY-egT" customClass="ChatTableViewMeCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="83" width="414" height="33"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="GBK-nY-egT" id="kQM-yI-Mn0">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7xC-sN-qDC" customClass="MessageTextView" customModule="Snikket" customModuleProvider="target">
+                                        <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7xC-sN-qDC" customClass="MessageTextView" customModule="Otherhome" customModuleProvider="target">
                                             <rect key="frame" x="20" y="4" width="374" height="25"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <accessibility key="accessibilityConfiguration">
@@ -72,8 +72,8 @@
                                     <outlet property="messageView" destination="7xC-sN-qDC" id="OAN-TU-jd1"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewCellContinuation" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewMessageContinuationCell" id="8Et-xM-dnP" customClass="ChatTableViewCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="110.5" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewCellContinuation" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewMessageContinuationCell" id="8Et-xM-dnP" customClass="ChatTableViewCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="8Et-xM-dnP" id="V41-Eh-z9O">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -85,7 +85,7 @@
                                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_bubble_received9" translatesAutoresizingMaskIntoConstraints="NO" id="Cdg-jt-Owd">
                                                     <rect key="frame" x="0.0" y="0.0" width="125" height="44"/>
                                                 </imageView>
-                                                <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rr7-FM-H1v" customClass="MessageTextView" customModule="Snikket" customModuleProvider="target">
+                                                <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rr7-FM-H1v" customClass="MessageTextView" customModule="Otherhome" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="4" width="100" height="34"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <accessibility key="accessibilityConfiguration">
@@ -135,8 +135,8 @@
                                     <outlet property="stateView" destination="6su-o4-Xbr" id="zg8-S0-2z5"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewCellContinuation2" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewMessageContinuationCell2" id="huG-Ws-60E" customClass="ChatTableViewCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="154.5" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewCellContinuation2" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewMessageContinuationCell2" id="huG-Ws-60E" customClass="ChatTableViewCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="huG-Ws-60E" id="MkF-ub-5jO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -157,7 +157,7 @@
                                                     <color key="textColor" name="chatMessageText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-OB-h5D" customClass="MessageTextView" customModule="Snikket" customModuleProvider="target">
+                                                <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-OB-h5D" customClass="MessageTextView" customModule="Otherhome" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="4" width="100" height="22"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <accessibility key="accessibilityConfiguration">
@@ -198,8 +198,8 @@
                                     <outlet property="stateView" destination="zch-RP-6hH" id="2Wx-oe-wBg"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewLinkPreviewCell" rowHeight="71" id="RRh-Va-SRE" customClass="LinkPreviewChatTableViewCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="198.5" width="414" height="71"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewLinkPreviewCell" rowHeight="71" id="RRh-Va-SRE" customClass="LinkPreviewChatTableViewCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="204" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="RRh-Va-SRE" id="b4O-zc-oXg">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
@@ -221,8 +221,8 @@
                                     <outlet property="bubbleImageView" destination="eIg-UF-O2r" id="L8l-wU-EXk"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewAttachmentContinuationCell" rowHeight="71" id="RfX-hS-d2H" customClass="AttachmentChatTableViewCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="269.5" width="414" height="71"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewAttachmentContinuationCell" rowHeight="71" id="RfX-hS-d2H" customClass="AttachmentChatTableViewCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="275" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="RfX-hS-d2H" id="dLL-EZ-lYx">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
@@ -276,8 +276,8 @@
                                     <outlet property="stateView" destination="xve-2C-pRH" id="elD-Kx-AOR"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewAttachmentContinuationCell2" rowHeight="71" id="MUh-Ya-KMJ" customClass="AttachmentChatTableViewCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="340.5" width="414" height="71"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewAttachmentContinuationCell2" rowHeight="71" id="MUh-Ya-KMJ" customClass="AttachmentChatTableViewCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="346" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="MUh-Ya-KMJ" id="DIf-G5-2Wm">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
@@ -331,8 +331,8 @@
                                     <outlet property="stateView" destination="OCn-qR-R43" id="Pgd-5N-hme"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewMessageCell" rowHeight="60" id="Edg-Ze-o8C" customClass="ChatTableViewCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="411.5" width="414" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewMessageCell" rowHeight="60" id="Edg-Ze-o8C" customClass="ChatTableViewCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="417" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="Edg-Ze-o8C" id="017-Lx-5HC">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -345,7 +345,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="97" height="60"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
-                                                <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qw2-0Z-3bH" customClass="MessageTextView" customModule="Snikket" customModuleProvider="target">
+                                                <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qw2-0Z-3bH" customClass="MessageTextView" customModule="Otherhome" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="5" width="80" height="28"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <accessibility key="accessibilityConfiguration">
@@ -406,7 +406,7 @@
                                                 <constraint firstItem="8sp-sS-akf" firstAttribute="leading" secondItem="bC4-tB-3tb" secondAttribute="leading" id="zyc-hE-gy6"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4H-BR-fYt" customClass="AvatarView" customModule="Snikket" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4H-BR-fYt" customClass="AvatarView" customModule="Otherhome" customModuleProvider="target">
                                             <rect key="frame" x="6" y="2" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="fpi-Oh-amS"/>
@@ -435,8 +435,8 @@
                                     <outlet property="timestampView" destination="5oi-v1-E9H" id="wSg-1o-lhw"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewCell2" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewMessageCell2" rowHeight="60" id="5md-uM-UrG" userLabel="ChatTableViewMessageCell2" customClass="ChatTableViewCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="471.5" width="414" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewCell2" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewMessageCell2" rowHeight="60" id="5md-uM-UrG" userLabel="ChatTableViewMessageCell2" customClass="ChatTableViewCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="477" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="5md-uM-UrG" id="Ti4-Ga-E6D">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -449,12 +449,12 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="140" height="60"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cB9-D3-EFb">
-                                                    <rect key="frame" x="10" y="0.0" width="35.5" height="17"/>
+                                                    <rect key="frame" x="10" y="0.0" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cFN-kT-7G4" customClass="MessageTextView" customModule="Snikket" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="22" width="120" height="8.5"/>
+                                                <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cFN-kT-7G4" customClass="MessageTextView" customModule="Otherhome" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="25.5" width="120" height="5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -506,7 +506,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="Yvn-Qh-y3C" secondAttribute="trailing" id="zd9-ua-6Iu"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ue-2V-Z6N" customClass="AvatarView" customModule="Snikket" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ue-2V-Z6N" customClass="AvatarView" customModule="Otherhome" customModuleProvider="target">
                                             <rect key="frame" x="373" y="22" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="6O8-rC-YOt"/>
@@ -535,8 +535,8 @@
                                     <outlet property="timestampView" destination="cBW-3j-fTG" id="AJ6-Yu-ymz"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewAttachmentCell" rowHeight="71" id="S8a-TQ-tLX" customClass="AttachmentChatTableViewCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="531.5" width="414" height="71"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewAttachmentCell" rowHeight="71" id="S8a-TQ-tLX" customClass="AttachmentChatTableViewCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="537" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="S8a-TQ-tLX" id="3eM-Pw-ok6">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
@@ -601,7 +601,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="ZH3-SQ-aI5" secondAttribute="trailing" constant="10" id="tPH-UO-OwD"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="txv-pU-gQT" customClass="AvatarView" customModule="Snikket" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="txv-pU-gQT" customClass="AvatarView" customModule="Otherhome" customModuleProvider="target">
                                             <rect key="frame" x="6" y="2" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="iOO-zb-7zY"/>
@@ -630,8 +630,8 @@
                                     <outlet property="timestampView" destination="32T-xF-1Fd" id="EW9-ZX-jCT"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewAttachmentCell2" rowHeight="71" id="SxS-SO-af1" customClass="AttachmentChatTableViewCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="602.5" width="414" height="71"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewAttachmentCell2" rowHeight="71" id="SxS-SO-af1" customClass="AttachmentChatTableViewCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="608" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="SxS-SO-af1" id="ngq-dH-Zkb">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
@@ -695,7 +695,7 @@
                                                 <constraint firstItem="7Of-Ji-bfQ" firstAttribute="centerY" secondItem="6uy-ZB-6uf" secondAttribute="centerY" id="rLJ-6k-pma"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-fX-daO" customClass="AvatarView" customModule="Snikket" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-fX-daO" customClass="AvatarView" customModule="Otherhome" customModuleProvider="target">
                                             <rect key="frame" x="373" y="31" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="4py-7q-Xyv"/>
@@ -723,14 +723,14 @@
                                     <outlet property="timestampView" destination="6uy-ZB-6uf" id="07r-GL-2a4"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewInvitationCell" rowHeight="78" id="kHO-eT-tka" customClass="InvitationChatTableViewCell" customModule="Snikket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="673.5" width="414" height="78"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewInvitationCell" rowHeight="78" id="kHO-eT-tka" customClass="InvitationChatTableViewCell" customModule="Otherhome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="679" width="414" height="78"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="kHO-eT-tka" id="ftW-8h-UsW">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3vr-dl-Qiu" customClass="AvatarView" customModule="Snikket" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3vr-dl-Qiu" customClass="AvatarView" customModule="Otherhome" customModuleProvider="target">
                                             <rect key="frame" x="6" y="5" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="2d5-dK-UW6"/>
@@ -839,7 +839,7 @@
             <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tintColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

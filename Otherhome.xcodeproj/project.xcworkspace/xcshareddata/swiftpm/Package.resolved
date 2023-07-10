@@ -1,43 +1,41 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "HSLuvSwift",
-        "repositoryURL": "https://github.com/hsluv/hsluv-swift.git",
-        "state": {
-          "branch": null,
-          "revision": "9dee4378180f2a9a33c96bc20284cf64158dbe1b",
-          "version": "2.1.0"
-        }
-      },
-      {
-        "package": "libsignal",
-        "repositoryURL": "https://github.com/tigase/libsignal",
-        "state": {
-          "branch": null,
-          "revision": "d23d5af0d729cf66b93cea607f3f84a34b9fddfd",
-          "version": "1.0.0"
-        }
-      },
-      {
-        "package": "TigaseSwift",
-        "repositoryURL": "https://github.com/tigase/tigase-swift",
-        "state": {
-          "branch": null,
-          "revision": "d3953dcea80010ad433fa96d7ca6b989bf58850c",
-          "version": "2.1.3"
-        }
-      },
-      {
-        "package": "TigaseSwiftOMEMO",
-        "repositoryURL": "https://github.com/tigase/tigase-swift-omemo/",
-        "state": {
-          "branch": null,
-          "revision": "4c997df9a3a686b7e522ddffa4d2f2c070a94fa0",
-          "version": "1.1.3"
-        }
+  "pins" : [
+    {
+      "identity" : "hsluv-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hsluv/hsluv-swift.git",
+      "state" : {
+        "revision" : "9dee4378180f2a9a33c96bc20284cf64158dbe1b",
+        "version" : "2.1.0"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "libsignal",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tigase/libsignal",
+      "state" : {
+        "revision" : "d23d5af0d729cf66b93cea607f3f84a34b9fddfd",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "tigase-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tigase/tigase-swift",
+      "state" : {
+        "revision" : "d3953dcea80010ad433fa96d7ca6b989bf58850c",
+        "version" : "2.1.3"
+      }
+    },
+    {
+      "identity" : "tigase-swift-omemo",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tigase/tigase-swift-omemo/",
+      "state" : {
+        "revision" : "4c997df9a3a686b7e522ddffa4d2f2c070a94fa0",
+        "version" : "1.1.3"
+      }
+    }
+  ],
+  "version" : 2
 }

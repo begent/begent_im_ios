@@ -30,6 +30,7 @@ class DiscoEventHandler: XmppServiceEventHandler {
     let events: [Event] = [DiscoveryModule.AccountFeaturesReceivedEvent.TYPE, DiscoveryModule.ServerFeaturesReceivedEvent.TYPE];
     
     func handle(event: Event) {
+        print("DiscoEventHandler", event);
         switch event {
         case let e as DiscoveryModule.AccountFeaturesReceivedEvent:
             NotificationCenter.default.post(name: DiscoEventHandler.ACCOUNT_FEATURES_RECEIVED, object: e);
